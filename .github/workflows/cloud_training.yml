@@ -1,0 +1,41 @@
+name: Cloud Retraining Pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      candidate_version:
+        description: 'Candidate Model Version (e.g. v2.0)'
+        required: true
+        default: 'v2.0'
+      min_samples:
+        description: 'Minimum Samples Requirement'
+        required: true
+        default: '100'
+
+jobs:
+  cloud_train:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install tensorflow pandas numpy pillow scikit-learn
+
+    - name: Execute Cloud Model Retraining Job
+      run: |
+        python -c "from src.training import CloudModelTrainer; trainer = CloudModelTrainer(); trainer.train_candidate_model('${{ github.event.inputs.candidate_version }}')"
+
+    - name: Upload Candidate Model Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: candidate-model-${{ github.event.inputs.candidate_version }}
+        path: outputs/training_runs/

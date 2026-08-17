@@ -1,0 +1,61 @@
+{
+  "project": "AI-Based Handwritten Medicine Recognition & Generic Medicine Identification",
+  "num_classes": 78,
+  "reference_baseline_acc": 0.5983,
+  "models": [
+    {
+      "file_name": "efficientnetb0_best.keras",
+      "architecture": "EfficientNetB0 (Dual-Pooling GAP+GMP + Ink/Contrast Augmentation)",
+      "dataset": "Expanded Dataset (5,240 images)",
+      "test_accuracy": 0.8391,
+      "test_accuracy_pct": "83.91%",
+      "macro_f1": 0.8421,
+      "file_size_mb": 24.7,
+      "gain_vs_baseline_pct": "+24.08%",
+      "is_best_model": true
+    },
+    {
+      "file_name": "v3_final.keras",
+      "architecture": "MobileNetV2 (CosineDecayRestarts + Dense 256 Head)",
+      "dataset": "Baseline Dataset (3,472 images)",
+      "test_accuracy": 0.6121,
+      "test_accuracy_pct": "61.21%",
+      "test_accuracy_with_tta_pct": "64.08%",
+      "macro_f1": 0.6087,
+      "file_size_mb": 13.5,
+      "gain_vs_baseline_pct": "+1.38%",
+      "is_best_model": false
+    },
+    {
+      "file_name": "densenet121_best.keras",
+      "architecture": "DenseNet121 (Dual-Pooling GAP+GMP Head)",
+      "dataset": "Expanded Dataset (5,240 images)",
+      "test_accuracy": 0.5489,
+      "test_accuracy_pct": "54.89%",
+      "macro_f1": 0.5376,
+      "file_size_mb": 35.5,
+      "gain_vs_baseline_pct": "-4.94%",
+      "is_best_model": false
+    },
+    {
+      "file_name": "Triple_Soft_Voting_Ensemble",
+      "architecture": "MobileNetV2 (0.20) + DenseNet121 (0.10) + EfficientNetB0 (0.70)",
+      "dataset": "Expanded Dataset (5,240 images)",
+      "test_accuracy": 0.8075,
+      "test_accuracy_pct": "80.75%",
+      "macro_f1": 0.8041,
+      "gain_vs_baseline_pct": "+20.92%",
+      "is_best_model": false
+    },
+    {
+      "file_name": "Triple_Ensemble_with_TTA",
+      "architecture": "MobileNetV2 + DenseNet121 + EfficientNetB0 + Multi-Crop Vectorized TTA",
+      "dataset": "Expanded Dataset (5,240 images)",
+      "test_accuracy": 0.8247,
+      "test_accuracy_pct": "82.47%",
+      "macro_f1": 0.8242,
+      "gain_vs_baseline_pct": "+22.64%",
+      "is_best_model": false
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+model_file_name,architecture,dataset,test_accuracy,macro_f1,file_size_mb,gain_vs_baseline
+efficientnetb0_best.keras,EfficientNetB0 (Dual-Pooling GAP+GMP + Ink Aug),Expanded Dataset (5240 imgs),83.91%,0.8421,24.7,+24.08%
+v3_final.keras,MobileNetV2 (CosineDecayRestarts + Dense 256),Baseline Dataset (3472 imgs),61.21%,0.6087,13.5,+1.38%
+v3_final.keras (with TTA),MobileNetV2 + Multi-Crop TTA,Baseline Dataset (3472 imgs),64.08%,0.6391,13.5,+4.25%
+densenet121_best.keras,DenseNet121 (Dual-Pooling GAP+GMP),Expanded Dataset (5240 imgs),54.89%,0.5376,35.5,-4.94%
+Triple Ensemble (Soft Voting),MobileNetV2 + DenseNet121 + EfficientNetB0,Expanded Dataset (5240 imgs),80.75%,0.8041,N/A,+20.92%
+Triple Ensemble + TTA,MobileNetV2 + DenseNet121 + EfficientNetB0 + TTA,Expanded Dataset (5240 imgs),82.47%,0.8242,N/A,+22.64%

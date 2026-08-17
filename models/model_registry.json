@@ -1,0 +1,27 @@
+{
+  "active_production_version": "v1.0",
+  "versions": {
+    "v1.0": {
+      "version": "v1.0",
+      "model_name": "EfficientNetB0",
+      "model_path": "models/efficientnetb0_best.keras",
+      "accuracy": 0.8391,
+      "macro_f1": 0.8421,
+      "training_date": "2026-08-17T11:00:00Z",
+      "dataset_samples_used": 5240,
+      "status": "PRODUCTION",
+      "created_at": "2026-08-17T11:00:00Z"
+    },
+    "v2.0_eval_test": {
+      "version": "v2.0_eval_test",
+      "model_name": "EfficientNetB0",
+      "model_path": "models/best.keras",
+      "accuracy": 0.88,
+      "macro_f1": 0.885,
+      "training_date": "2026-08-17T10:21:32.523444+00:00",
+      "dataset_samples_used": 0,
+      "status": "APPROVED",
+      "created_at": "2026-08-17T10:21:32.523444+00:00"
+    }
+  }
+}
