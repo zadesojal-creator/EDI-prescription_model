@@ -34,7 +34,8 @@ def test_email_and_review_ui():
     print(f"   - Doctor Review Link : {data_pred['doctor_review_url']}")
     print(f"   - Email Sent To      : {data_pred['email_notification']['to']}")
     print(f"   - Email Subject      : {data_pred['email_notification']['subject']}")
-    print(f"   - Delivery Status    : {data_pred['email_notification']['delivery_status']}")
+    print(f"   - Email Status       : {data_pred['email_notification']['email_status']}")
+
 
     assert "email_notification" in data_pred
     assert data_pred["email_notification"]["to"] == "dr.smith@hospital.org"

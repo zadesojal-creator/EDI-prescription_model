@@ -143,5 +143,9 @@ def run_master_verification():
     print("   ALL 12 SYSTEM PHASES VERIFIED & WORKING CLEANLY!")
     print("="*70)
 
+def test_master_verification():
+    run_master_verification()
+
 if __name__ == "__main__":
     run_master_verification()
+

@@ -71,7 +71,7 @@ def health_check():
 @app.post("/api/predict")
 async def predict_prescription(
     file: UploadFile = File(...),
-    doctor_email: Optional[str] = Query("doctor@clinic.org", description="Doctor email for review link notification")
+    doctor_email: Optional[str] = Query(None, description="Optional override doctor email for review notification")
 ):
     """
     Accepts an uploaded prescription image file.
@@ -102,12 +102,19 @@ async def predict_prescription(
     # 3. Generate Secure Time-Limited Token
     token_record = token_mgr.generate_review_token(review_task["review_id"], ttl_hours=24)
 
-    # 4. Dispatch Doctor Email Notification
-    email_data = email_notifier.send_doctor_review_email(
-        doctor_email=doctor_email,
-        review_task=review_task,
-        token_record=token_record
-    )
+    # 4. Dispatch Doctor Email Notification (Non-blocking on failure)
+    try:
+        email_data = email_notifier.send_doctor_review_email(
+            review_task=review_task,
+            token_record=token_record,
+            doctor_email=doctor_email
+        )
+    except Exception as err:
+        email_data = {
+            "email_status": "FAILED",
+            "email_error": str(err),
+            "message": f"Email service failure: {str(err)}"
+        }
 
     return {
         "prediction": prediction_result,
@@ -118,6 +125,7 @@ async def predict_prescription(
         "token_expires_at": token_record["expires_at"],
         "email_notification": email_data
     }
+
 
 @app.get("/api/doctor/reviews")
 def get_doctor_reviews(priority: Optional[str] = Query(None, description="Filter by priority: HIGH, MEDIUM, LOW")):
@@ -223,6 +231,39 @@ def rollback_model_version(payload: RollbackRequest):
         return res
     except (KeyError, ValueError) as e:
         raise HTTPException(status_code=400, detail=str(e))
+
+@app.post("/api/admin/test-doctor-email")
+def test_doctor_email_notification(doctor_email: Optional[str] = Query(None, description="Optional target doctor email")):
+    """
+    Controlled admin endpoint to test doctor email notification dispatch.
+    Sends a test notification to configured DOCTOR_EMAIL without exposing real patient data.
+    """
+    mock_task = {
+        "review_id": f"rev_test_{uuid.uuid4().hex[:6]}",
+        "prescription_id": "rx_test_sample",
+        "original_prediction": "Vifas (TEST)",
+        "original_confidence": 0.42,
+        "priority": "HIGH",
+        "prediction_status": "doctor_verification_required",
+        "top_3_predictions": [
+            {"brand_name": "Vifas (TEST)", "confidence": 0.42, "generic_name": "Fexofenadine Hydrochloride"},
+            {"brand_name": "Ace", "confidence": 0.31, "generic_name": "Paracetamol"},
+            {"brand_name": "Filmet", "confidence": 0.12, "generic_name": "Metronidazole"}
+        ]
+    }
+    mock_token = token_mgr.generate_review_token(mock_task["review_id"], ttl_hours=24)
+    email_res = email_notifier.send_doctor_review_email(
+        review_task=mock_task,
+        token_record=mock_token,
+        doctor_email=doctor_email,
+        is_test=True
+    )
+    return {
+        "status": "SUCCESS",
+        "message": "Admin test doctor email dispatch completed.",
+        "email_notification": email_res
+    }
+
 
 
 def render_doctor_review_html(token: str, token_record: dict, task: dict, known_classes: List[str]) -> str:
