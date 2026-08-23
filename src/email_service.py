@@ -13,6 +13,10 @@ from email.mime.text import MIMEText
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional, Dict
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 class DoctorEmailNotifier:
     """

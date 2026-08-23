@@ -74,9 +74,10 @@ def test_email_service_unit():
         print("\n4. Testing Duplicate Email Prevention:")
         mock_task_dup = {"review_id": "rev_dup_002", "priority": "MEDIUM", "original_prediction": "Ace", "original_confidence": 0.80}
 
-        # First Dispatch
-        res_1 = notifier.send_doctor_review_email(mock_task_dup, mock_token, force_resend=True)
-        assert res_1["notification_status"] in ["DISABLED", "LOGGED_LOCAL_MOCK"]
+        # First Dispatch (In mock/disabled mode)
+        with patch.dict(os.environ, {"EMAIL_ENABLED": "false"}):
+            res_1 = notifier.send_doctor_review_email(mock_task_dup, mock_token, force_resend=True)
+            assert res_1["notification_status"] in ["DISABLED", "LOGGED_LOCAL_MOCK"]
 
         # Manually mark as SENT in log file to test duplicate detection
         logs = notifier._read_logs()
@@ -84,9 +85,11 @@ def test_email_service_unit():
         notifier._write_logs(logs)
 
         # Second Dispatch attempt (Should be blocked as SKIPPED_DUPLICATE)
-        res_2 = notifier.send_doctor_review_email(mock_task_dup, mock_token)
-        print(f"   - Second Dispatch Status: {res_2['email_status']} ({res_2['message']})")
-        assert res_2["email_status"] == "SKIPPED_DUPLICATE"
+        with patch.dict(os.environ, {"EMAIL_ENABLED": "false"}):
+            res_2 = notifier.send_doctor_review_email(mock_task_dup, mock_token)
+            print(f"   - Second Dispatch Status: {res_2['email_status']} ({res_2['message']})")
+            assert res_2["email_status"] == "SKIPPED_DUPLICATE"
+
 
         # 5. Test Non-crashing SMTP Failure Handling
         print("\n5. Testing Non-Crashing SMTP Failure Handling:")
