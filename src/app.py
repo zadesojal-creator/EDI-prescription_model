@@ -88,16 +88,21 @@ async def predict_prescription(
     with open(saved_path, "wb") as buffer:
         shutil.copyfileobj(file.file, buffer)
 
-    # 1. Run Inference
-    prediction_result = predictor.predict(str(saved_path))
+    # 1. Run Multi-Line Prescription Inference & Segmentation
+    full_prediction = predictor.predict_full_prescription(str(saved_path))
     active_model = registry_mgr.get_active_production_model()
+
+    # Get primary prediction for doctor task creation (if single line use it, if multi-line use top line)
+    primary_pred = full_prediction["medicines"][0]["prediction"]
 
     # 2. Create Doctor Review Task
     review_task = feedback_mgr.create_review_task(
-        prediction_result=prediction_result,
+        prediction_result=primary_pred,
         image_reference=str(saved_path),
         model_version=active_model["version"]
     )
+    review_task["total_medicines_detected"] = full_prediction["total_medicines_detected"]
+    review_task["all_medicines"] = full_prediction["medicines"]
 
     # 3. Generate Secure Time-Limited Token
     token_record = token_mgr.generate_review_token(review_task["review_id"], ttl_hours=24)
@@ -117,7 +122,11 @@ async def predict_prescription(
         }
 
     return {
-        "prediction": prediction_result,
+        "is_multi_line": full_prediction["is_multi_line"],
+        "total_medicines_detected": full_prediction["total_medicines_detected"],
+        "message": full_prediction["message"],
+        "prediction": primary_pred,
+        "all_medicines": full_prediction["medicines"],
         "review_id": review_task["review_id"],
         "review_priority": review_task["priority"],
         "doctor_review_url": token_record["review_url"],
@@ -125,6 +134,7 @@ async def predict_prescription(
         "token_expires_at": token_record["expires_at"],
         "email_notification": email_data
     }
+
 
 
 @app.get("/api/doctor/reviews")
@@ -145,6 +155,18 @@ def serve_prescription_image(filename: str):
     if not img_path.exists():
         raise HTTPException(status_code=404, detail="Image file not found.")
     return FileResponse(str(img_path))
+
+@app.get("/api/image/segments/{filename}")
+def serve_segment_image(filename: str):
+    """
+    Serves cropped line segment image file for browser display.
+    """
+    seg_dir = PROJECT_ROOT / "data" / "uploads" / "segments"
+    img_path = seg_dir / filename
+    if not img_path.exists():
+        raise HTTPException(status_code=404, detail="Segment image file not found.")
+    return FileResponse(str(img_path))
+
 
 @app.get("/review/{token}")
 def get_review_by_token(token: str, request: Request):
@@ -269,25 +291,90 @@ def test_doctor_email_notification(doctor_email: Optional[str] = Query(None, des
 def render_doctor_review_html(token: str, token_record: dict, task: dict, known_classes: List[str]) -> str:
     """
     Renders an interactive, responsive HTML/JS Doctor Review Portal for browser view.
+    Supports both single-word and full multi-line prescription page views.
     """
     is_used = token_record.get("used", False)
     img_filename = Path(task["image_reference"]).name
     img_url = f"/api/image/{img_filename}"
     priority = task.get("priority", "HIGH")
-    brand = task.get("original_prediction", "Unknown")
-    conf = float(task.get("original_confidence", 0.0)) * 100
+    total_count = task.get("total_medicines_detected", 1)
+    all_meds = task.get("all_medicines", [])
 
     options_html = "".join([f'<option value="{c}">{c}</option>' for c in sorted(known_classes)])
 
-    candidates_rows = ""
-    for idx, c in enumerate(task.get("top_3_predictions", []), 1):
-        candidates_rows += f"""
-        <tr>
-          <td><strong>#{idx}</strong></td>
-          <td>{c['brand_name']}</td>
-          <td>{c.get('generic_name', 'N/A')}</td>
-          <td>{float(c['confidence'])*100:.2f}%</td>
-        </tr>
+    med_cards_html = ""
+    if all_meds:
+        for m in all_meds:
+            line_no = m["line_number"]
+            pred = m["prediction"]
+            seg_file = m.get("segment_filename")
+            seg_img_url = f"/api/image/segments/{seg_file}" if seg_file else img_url
+            b_name = pred["top_brand"]
+            c_val = float(pred["top_confidence"]) * 100
+            p_status = pred["status"]
+            g_name = pred.get("generic_name") or "N/A"
+
+            candidates_rows = ""
+            for idx, c in enumerate(pred.get("top_candidates", []), 1):
+                candidates_rows += f"""
+                <tr>
+                  <td><strong>#{idx}</strong></td>
+                  <td>{c['brand_name']}</td>
+                  <td>{c.get('generic_name', 'N/A')}</td>
+                  <td>{float(c['confidence'])*100:.2f}%</td>
+                </tr>
+                """
+
+            med_cards_html += f"""
+            <div style="background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:18px; margin-bottom:20px; box-shadow:0 2px 6px rgba(0,0,0,0.04);">
+              <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #edf2f7; padding-bottom:10px; margin-bottom:12px;">
+                <h3 style="margin:0; color:#2b6cb0;">Medicine Line #{line_no}</h3>
+                <span class="badge badge-{pred.get('review_priority', 'HIGH')}">{pred.get('review_priority', 'HIGH')} PRIORITY</span>
+              </div>
+
+              <div class="grid">
+                <div class="img-box">
+                  <p style="color:#a0aec0; font-size:11px; margin:0 0 6px 0;">Line Crop Segment</p>
+                  <img src="{seg_img_url}" alt="Line #{line_no} Crop">
+                </div>
+                <div class="info-box">
+                  <p style="margin:4px 0;"><strong>Top Brand:</strong> <span style="font-size:16px; color:#2b6cb0;">{b_name}</span></p>
+                  <p style="margin:4px 0;"><strong>Generic Name:</strong> {g_name}</p>
+                  <p style="margin:4px 0;"><strong>AI Confidence:</strong> {c_val:.2f}%</p>
+                  <p style="margin:4px 0;"><strong>Status:</strong> {p_status}</p>
+                </div>
+              </div>
+
+              <details style="margin-top:10px; background:#f7fafc; padding:8px 12px; border-radius:6px; border:1px solid #edf2f7;">
+                <summary style="cursor:pointer; font-weight:bold; font-size:13px; color:#4a5568;">View Top-3 Candidates Table</summary>
+                <table>
+                  <thead><tr><th>Rank</th><th>Brand</th><th>Generic</th><th>Confidence</th></tr></thead>
+                  <tbody>{candidates_rows}</tbody>
+                </table>
+              </details>
+            </div>
+            """
+    else:
+        brand = task.get("original_prediction", "Unknown")
+        conf = float(task.get("original_confidence", 0.0)) * 100
+        candidates_rows = ""
+        for idx, c in enumerate(task.get("top_3_predictions", []), 1):
+            candidates_rows += f"""
+            <tr>
+              <td><strong>#{idx}</strong></td>
+              <td>{c['brand_name']}</td>
+              <td>{c.get('generic_name', 'N/A')}</td>
+              <td>{float(c['confidence'])*100:.2f}%</td>
+            </tr>
+            """
+        med_cards_html = f"""
+        <div class="info-box">
+          <h4 style="margin-top:0;">Top-3 AI Candidates</h4>
+          <table>
+            <thead><tr><th>Rank</th><th>Brand</th><th>Generic</th><th>Confidence</th></tr></thead>
+            <tbody>{candidates_rows}</tbody>
+          </table>
+        </div>
         """
 
     return f"""
@@ -300,19 +387,19 @@ def render_doctor_review_html(token: str, token_record: dict, task: dict, known_
       <style>
         * {{ box-sizing: border-box; }}
         body {{ font-family: 'Segoe UI', system-ui, sans-serif; background: #f0f4f8; margin: 0; padding: 20px; color: #2d3748; }}
-        .card {{ max-width: 800px; margin: 0 auto; background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); }}
+        .card {{ max-width: 850px; margin: 0 auto; background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); }}
         .header {{ display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #edf2f7; padding-bottom: 16px; margin-bottom: 20px; }}
         .badge {{ padding: 6px 14px; border-radius: 20px; font-weight: 700; font-size: 13px; text-transform: uppercase; }}
         .badge-HIGH {{ background: #fed7d7; color: #9b2c2c; }}
         .badge-MEDIUM {{ background: #feebc8; color: #9c4221; }}
         .badge-LOW {{ background: #c6f6d5; color: #22543d; }}
-        .grid {{ display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }}
+        .grid {{ display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 10px; }}
         @media (max-width: 600px) {{ .grid {{ grid-template-columns: 1fr; }} }}
-        .img-box {{ background: #1a202c; border-radius: 8px; overflow: hidden; text-align: center; padding: 10px; }}
-        .img-box img {{ max-width: 100%; max-height: 300px; object-fit: contain; border-radius: 4px; }}
-        .info-box {{ background: #f7fafc; padding: 16px; border-radius: 8px; border: 1px solid #e2e8f0; }}
-        table {{ width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }}
-        th, td {{ padding: 8px 12px; text-align: left; border-bottom: 1px solid #edf2f7; }}
+        .img-box {{ background: #1a202c; border-radius: 8px; overflow: hidden; text-align: center; padding: 8px; }}
+        .img-box img {{ max-width: 100%; max-height: 220px; object-fit: contain; border-radius: 4px; }}
+        .info-box {{ background: #f7fafc; padding: 14px; border-radius: 8px; border: 1px solid #e2e8f0; font-size: 14px; }}
+        table {{ width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 13px; }}
+        th, td {{ padding: 6px 10px; text-align: left; border-bottom: 1px solid #edf2f7; }}
         th {{ background: #edf2f7; }}
         .action-box {{ background: #ebf8ff; border: 1px solid #bee3f8; padding: 20px; border-radius: 8px; margin-top: 20px; }}
         .btn {{ display: inline-block; width: 100%; padding: 12px; border: none; border-radius: 6px; font-size: 15px; font-weight: 700; cursor: pointer; transition: 0.2s; margin-top: 10px; }}
@@ -326,6 +413,7 @@ def render_doctor_review_html(token: str, token_record: dict, task: dict, known_
         .alert {{ padding: 16px; border-radius: 8px; font-weight: bold; margin-bottom: 20px; display: none; }}
         .alert-success {{ background: #c6f6d5; color: #22543d; }}
         .alert-error {{ background: #fed7d7; color: #9b2c2c; }}
+        .summary-banner {{ background: #ebf8ff; border-left: 4px solid #3182ce; padding: 14px; border-radius: 6px; margin-bottom: 20px; font-weight: 600; color: #2b6cb0; }}
       </style>
     </head>
     <body>
@@ -339,39 +427,34 @@ def render_doctor_review_html(token: str, token_record: dict, task: dict, known_
 
         {'<div class="alert alert-error" style="display:block;">⚠️ This review link has already been submitted and completed.</div>' if is_used else ''}
 
-        <div class="grid">
+        <div class="summary-banner">
+          📋 Prescription Page Analyzed — Total Prescribed Medicines Detected: <strong>{total_count}</strong>
+        </div>
+
+        <div class="grid" style="margin-bottom:24px;">
           <div class="img-box">
-            <p style="color:#a0aec0; font-size:12px; margin-top:0;">Prescription Handwriting Preview</p>
-            <img src="{img_url}" alt="Prescription Image">
+            <p style="color:#a0aec0; font-size:12px; margin-top:0;">Full Prescription Sheet Preview</p>
+            <img src="{img_url}" alt="Full Prescription Image">
           </div>
           <div class="info-box">
-            <h4 style="margin-top:0;">AI Prediction Summary</h4>
-            <p><strong>Top Predicted Brand:</strong> <span style="font-size:18px; color:#2b6cb0;">{brand}</span></p>
-            <p><strong>Top Confidence:</strong> {conf:.2f}%</p>
+            <h4 style="margin-top:0;">Prescription Summary</h4>
             <p><strong>Prescription ID:</strong> <code>{task['prescription_id']}</code></p>
-            <p><strong>Task Status:</strong> {task['prediction_status']}</p>
+            <p><strong>Total Medicines Detected:</strong> {total_count}</p>
+            <p><strong>Task Review Priority:</strong> <span class="badge badge-{priority}">{priority}</span></p>
           </div>
         </div>
 
-        <div class="info-box">
-          <h4 style="margin-top:0;">Top-3 AI Candidates</h4>
-          <table>
-            <thead>
-              <tr><th>Rank</th><th>Brand Candidate</th><th>Generic Formulation</th><th>Confidence</th></tr>
-            </thead>
-            <tbody>
-              {candidates_rows}
-            </tbody>
-          </table>
-        </div>
+        <h3 style="color:#2b6cb0; margin-bottom:12px;">Individual Medicine Line Predictions</h3>
+
+        {med_cards_html}
 
         <div class="action-box" id="form-container" style="{'display:none;' if is_used else ''}">
           <h3 style="margin-top:0; color:#2c5282;">Doctor Feedback Verification</h3>
-          <p style="font-size:14px; color:#4a5568;">Select your clinical decision below:</p>
+          <p style="font-size:14px; color:#4a5568;">Select your clinical decision for this prescription review:</p>
 
           <!-- OPTION 1: CONFIRM -->
-          <button class="btn btn-confirm" onclick="submitFeedback('CONFIRM', '{brand}')">
-            ✓ CONFIRM AI PREDICTION ({brand})
+          <button class="btn btn-confirm" onclick="submitFeedback('CONFIRM', '{task.get('original_prediction', 'Verified')}')">
+            ✓ CONFIRM ALL AI PREDICTIONS
           </button>
 
           <hr style="margin: 20px 0; border:0; border-top:1px solid #cbd5e0;">
@@ -414,7 +497,7 @@ def render_doctor_review_html(token: str, token_record: dict, task: dict, known_
                 doctor_action: action,
                 doctor_verified_label: label,
                 doctor_id: "doc_web_portal",
-                doctor_email: "doctor@clinic.org"
+                doctor_email: "zadesojal@gmail.com"
               }})
             }});
             const data = await res.json();
@@ -457,3 +540,4 @@ def render_doctor_review_html(token: str, token_record: dict, task: dict, known_
     </body>
     </html>
     """
+

@@ -106,4 +106,32 @@ class MedicinePredictor:
             "raw_probabilities": raw_probs.tolist()
         }
 
+    def predict_full_prescription(self, image_path: str, top_k: int = 3) -> dict:
+        """
+        Segment a full prescription page into handwritten medicine lines,
+        clarify the total prescribed medicines count, and run ML inference on each segment line.
+        """
+        from src.segmenter import PrescriptionLineSegmenter
+        segmenter = PrescriptionLineSegmenter()
+        seg_res = segmenter.segment_prescription_lines(image_path)
+
+        predictions = []
+        for seg in seg_res["segments"]:
+            crop_path = seg["cropped_image_path"]
+            line_pred = self.predict(crop_path, top_k=top_k)
+            predictions.append({
+                "line_number": seg["line_number"],
+                "bounding_box": seg["bounding_box"],
+                "segment_filename": seg.get("segment_filename"),
+                "prediction": line_pred
+            })
+
+        return {
+            "is_multi_line": seg_res["is_multi_line"],
+            "total_medicines_detected": seg_res["total_medicines_detected"],
+            "message": f"Prescription processed: {seg_res['total_medicines_detected']} prescribed medicine(s) detected and analyzed.",
+            "medicines": predictions
+        }
+
+
 
