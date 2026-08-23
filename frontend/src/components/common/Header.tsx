@@ -1,58 +1,77 @@
 import React from 'react';
-import { Bell, ShieldCheck, User, Menu } from 'lucide-react';
-import { CURRENT_DOCTOR } from '../../constants';
+import { useNavigate } from 'react-router-dom';
+import { ShieldCheck, LogOut, User, Pill, Stethoscope } from 'lucide-react';
+import { authApi } from '../../services/authApi';
 
 interface HeaderProps {
   onToggleSidebar?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({ onToggleSidebar }) => {
+  const navigate = useNavigate();
+  const currentUser = authApi.getCurrentUser();
+
+  const handleLogout = () => {
+    const isDoc = currentUser?.role === 'DOCTOR';
+    authApi.logout();
+    navigate(isDoc ? '/doctor/login' : '/pharmacist/login');
+  };
+
   return (
-    <header className="h-16 bg-white border-b border-slate-200 px-4 md:px-6 flex items-center justify-between sticky top-0 z-30 shadow-sm">
+    <header className="h-16 bg-slate-900 border-b border-slate-800 text-white flex items-center justify-between px-4 sm:px-6 sticky top-0 z-30 shadow-md font-sans">
+      {/* Brand Title */}
       <div className="flex items-center gap-3">
         <button
           onClick={onToggleSidebar}
-          className="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100"
-          aria-label="Toggle Sidebar"
+          className="lg:hidden p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white cursor-pointer"
         >
-          <Menu className="w-5 h-5" />
+          ☰
         </button>
-
-        <div className="flex items-center gap-2">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-medical-700 to-medical-500 flex items-center justify-center text-white font-bold text-lg shadow-sm">
+        <div
+          onClick={() => navigate(currentUser?.role === 'DOCTOR' ? '/doctor/dashboard' : '/pharmacist/dashboard')}
+          className="flex items-center gap-2 cursor-pointer"
+        >
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-medical-600 to-medical-400 flex items-center justify-center font-bold text-lg text-white shadow-xs">
             M
           </div>
           <div>
-            <h1 className="font-bold text-slate-900 leading-tight text-base flex items-center gap-2">
-              MediVerify <span className="text-xs font-semibold px-2 py-0.5 rounded bg-medical-50 text-medical-700 border border-medical-100">AI Console</span>
-            </h1>
-            <p className="text-xs text-slate-500 font-medium">Doctor Decision-Support Workspace</p>
+            <span className="font-bold text-sm tracking-tight text-white block">MediVerify AI</span>
+            <span className="text-[10px] text-medical-300 font-semibold uppercase tracking-wider block">
+              {currentUser?.role === 'DOCTOR' ? 'Doctor Review Portal' : 'Pharmacist Dispensing Portal'}
+            </span>
           </div>
         </div>
       </div>
 
-      <div className="flex items-center gap-4">
-        <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-medium">
+      {/* Role & Session Status */}
+      <div className="flex items-center gap-4 text-xs">
+        <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-semibold">
           <ShieldCheck className="w-3.5 h-3.5" />
-          <span>Secure Session</span>
+          <span>Encrypted Session</span>
         </div>
 
-        <button className="relative p-2 text-slate-500 hover:text-slate-700 hover:bg-slate-100 rounded-full transition-colors">
-          <Bell className="w-5 h-5" />
-          <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
-        </button>
+        {currentUser && (
+          <div className="flex items-center gap-3 pl-3 border-l border-slate-800">
+            <div className="text-right hidden sm:block">
+              <span className="font-bold text-slate-100 block text-xs">{currentUser.name}</span>
+              <span className="text-[10px] text-slate-400 font-medium block flex items-center gap-1 justify-end">
+                {currentUser.role === 'DOCTOR' ? (
+                  <><Stethoscope className="w-3 h-3 text-emerald-400" /> Doctor</>
+                ) : (
+                  <><Pill className="w-3 h-3 text-medical-400" /> Pharmacist</>
+                )}
+              </span>
+            </div>
 
-        <div className="h-6 w-px bg-slate-200" />
-
-        <div className="flex items-center gap-2.5 cursor-pointer p-1 rounded-lg hover:bg-slate-50 transition-colors">
-          <div className="w-9 h-9 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-700 font-semibold text-sm">
-            SZ
+            <button
+              onClick={handleLogout}
+              title="Logout"
+              className="p-2 rounded-xl bg-slate-800 hover:bg-rose-600/20 text-slate-300 hover:text-rose-400 border border-slate-700 transition-colors cursor-pointer"
+            >
+              <LogOut className="w-4 h-4" />
+            </button>
           </div>
-          <div className="hidden md:block text-left">
-            <div className="text-xs font-bold text-slate-900">{CURRENT_DOCTOR.doctor_name}</div>
-            <div className="text-[11px] text-slate-500 font-medium">{CURRENT_DOCTOR.specialty}</div>
-          </div>
-        </div>
+        )}
       </div>
     </header>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import {
+  Sparkles,
   LayoutDashboard,
   Inbox,
   CheckCircle2,
@@ -29,13 +30,14 @@ export const Sidebar: React.FC<SidebarProps> = ({
   onClose
 }) => {
   const navItems = [
-    { to: '/doctor/dashboard', label: 'Overview', icon: LayoutDashboard },
+    { to: '/scan', label: 'Scan Prescription', icon: Sparkles },
+    { to: '/doctor/dashboard', label: 'Doctor Console', icon: LayoutDashboard },
     { to: '/doctor/reviews', label: 'Review Queue', icon: Inbox, badge: highCount + mediumCount + lowCount },
-    { to: '/doctor/verified', label: 'Verified', icon: CheckCircle2 },
-    { to: '/doctor/history', label: 'Review History', icon: History },
+    { to: '/doctor/verified', label: 'Verified Log', icon: CheckCircle2 },
     { to: '/doctor/analytics', label: 'Analytics', icon: BarChart3 },
     { to: '/doctor/models', label: 'Model Registry', icon: Cpu },
   ];
+
 
   return (
     <>

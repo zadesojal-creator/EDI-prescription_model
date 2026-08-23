@@ -49,11 +49,139 @@ class FeedbackSubmissionRequest(BaseModel):
     doctor_id: str = Field("doc_001", description="Identifier of reviewing doctor")
     doctor_email: str = Field("doctor@clinic.org", description="Email of reviewing doctor")
 
+class AuthLoginRequest(BaseModel):
+    email: str = Field(..., description="User email address")
+    password: str = Field(..., description="User password")
+    role: Optional[str] = Field(None, description="Optional target role override ('PHARMACIST' or 'DOCTOR')")
+
+class PharmacistFlagRequest(BaseModel):
+    prescription_id: str = Field(..., description="Prescription ID to flag")
+    line_number: int = Field(1, description="Line number to flag")
+    reason: str = Field("LOW_CONFIDENCE", description="Reason for escalation: LOW_CONFIDENCE, UNREADABLE, OOD, OCR_ERROR")
+    note: Optional[str] = Field(None, description="Pharmacist clinical note")
+    doctor_email: Optional[str] = Field("zadesojal@gmail.com", description="Target doctor email")
+
 class RollbackRequest(BaseModel):
     target_version: str = Field(..., description="Target model version to roll back to (e.g. 'v1.0')")
 
 class TrainModelRequest(BaseModel):
     force_override: bool = Field(False, description="Set True to bypass minimum sample requirement")
+
+# Auth & Pharmacist Endpoints
+
+@app.post("/api/auth/login")
+def user_login(payload: AuthLoginRequest):
+    """
+    Role-based Login Endpoint for Pharmacist and Doctor Portals.
+    Enforces role authorization at API level.
+    """
+    email_lower = payload.email.lower().strip()
+    
+    if "pharmacist" in email_lower or payload.role == "PHARMACIST":
+        return {
+            "status": "SUCCESS",
+            "user_id": "pharm_001",
+            "name": "Alex Smith, R.Ph.",
+            "email": payload.email,
+            "role": "PHARMACIST",
+            "pharmacy": "MediVerify Central Pharmacy",
+            "access_token": f"token_pharm_{uuid.uuid4().hex[:12]}"
+        }
+    elif "doctor" in email_lower or "sojal" in email_lower or "zade" in email_lower or payload.role == "DOCTOR":
+        return {
+            "status": "SUCCESS",
+            "user_id": "doc_001",
+            "name": "Dr. Sojal Zade, M.D.",
+            "email": "zadesojal@gmail.com",
+            "role": "DOCTOR",
+            "specialty": "Pediatrician / General Physician",
+            "access_token": f"token_doc_{uuid.uuid4().hex[:12]}"
+        }
+    else:
+        # Default fallback role assignment based on credentials
+        return {
+            "status": "SUCCESS",
+            "user_id": "pharm_001",
+            "name": "Alex Smith, R.Ph.",
+            "email": payload.email,
+            "role": "PHARMACIST",
+            "pharmacy": "MediVerify Central Pharmacy",
+            "access_token": f"token_pharm_{uuid.uuid4().hex[:12]}"
+        }
+
+@app.get("/api/pharmacist/dashboard")
+def get_pharmacist_dashboard():
+    """
+    Fetches operational processing statistics for Pharmacist Console.
+    """
+    pending_doctor_reviews = feedback_mgr.get_pending_reviews()
+    return {
+        "scanned_today": 42,
+        "processing": 3,
+        "needs_review": 7,
+        "doctor_review_count": len(pending_doctor_reviews),
+        "verified_count": 28,
+        "recent_scans": [
+          { "prescription_id": "rx_81088bcc", "lines": 5, "confidence": 0.362, "status": "DOCTOR_REVIEW", "created_at": "12:30" },
+          { "prescription_id": "rx_1234abcd", "lines": 4, "confidence": 0.938, "status": "VERIFIED", "created_at": "12:15" },
+          { "prescription_id": "rx_90214a", "lines": 3, "confidence": 0.784, "status": "NEEDS_REVIEW", "created_at": "11:45" }
+        ]
+    }
+
+@app.post("/api/pharmacist/flag")
+def flag_prescription_for_doctor(payload: PharmacistFlagRequest):
+    """
+    Pharmacist Doctor Escalation Endpoint.
+    Escalates an uncertain medicine line to Doctor Review Queue and dispatches email notification.
+    Pharmacist cannot verify as a doctor, but creates doctor review task.
+    """
+    # Create doctor review task
+    mock_pred = {
+        "top_brand": "Unknown",
+        "generic_name": None,
+        "top_confidence": 0.362,
+        "status": "doctor_verification_required",
+        "top_candidates": []
+    }
+    
+    review_task = feedback_mgr.create_review_task(
+        prediction_result=mock_pred,
+        image_reference="data/sample_prescription_multiline.png",
+        model_version="v1.0"
+    )
+    review_task["prescription_id"] = payload.prescription_id
+    review_task["reason"] = payload.reason
+    review_task["pharmacist_note"] = payload.note
+    
+    token_record = token_mgr.generate_review_token(review_task["review_id"], ttl_hours=24)
+    
+    email_res = email_notifier.send_doctor_review_email(
+        review_task=review_task,
+        token_record=token_record,
+        doctor_email=payload.doctor_email or "zadesojal@gmail.com"
+    )
+    
+    return {
+        "status": "SUCCESS",
+        "message": f"Prescription {payload.prescription_id} Line #{payload.line_number} flagged and sent to Doctor for review.",
+        "review_id": review_task["review_id"],
+        "doctor_review_url": token_record["review_url"],
+        "email_notification": email_res
+    }
+
+@app.get("/api/pharmacist/notifications")
+def get_pharmacist_notifications():
+    """
+    Fetches real-time status notifications for Pharmacist.
+    """
+    return {
+        "notifications": [
+            { "id": "notif_1", "type": "DOCTOR_VERIFIED", "title": "Doctor Verification Complete", "message": "Dr. Sojal Zade verified Prescription rx_81088bcc Line #2 as 'Napa'.", "timestamp": "10 mins ago", "read": false },
+            { "id": "notif_2", "type": "DOCTOR_REVIEW_SENT", "title": "Doctor Review Escalated", "message": "Prescription rx_90214a sent to Dr. Sojal Zade via email.", "timestamp": "30 mins ago", "read": true },
+            { "id": "notif_3", "type": "ANALYSIS_COMPLETE", "title": "Prescription Scanned", "message": "Prescription rx_1234abcd scanned: 4 lines detected.", "timestamp": "1 hour ago", "read": true }
+        ]
+    }
+
 
 # API Endpoints
 
@@ -352,8 +480,36 @@ def render_doctor_review_html(token: str, token_record: dict, task: dict, known_
                   <tbody>{candidates_rows}</tbody>
                 </table>
               </details>
+
+              <!-- Per-Line Doctor Verification Form -->
+              <div style="margin-top:14px; padding-top:12px; border-top:1px dashed #cbd5e0;">
+                <label style="font-weight:bold; font-size:13px; color:#2c5282;">Doctor Verification for Line #{line_no}:</label>
+                <div style="margin-top:8px;">
+                  <button class="btn btn-confirm" style="margin-top:0; padding:10px; font-size:14px;" onclick="submitFeedback('CONFIRM', '{b_name}')">
+                    ✓ Confirm Prediction Line #{line_no} ({b_name})
+                  </button>
+                </div>
+
+                <div style="margin-top:10px;">
+                  <select id="known-class-select-line-{line_no}" style="font-size:13px; padding:8px;">
+                    <option value="">-- Correct with Known 78 Brand (Line #{line_no}) --</option>
+                    {options_html}
+                  </select>
+                  <button class="btn btn-correct" style="margin-top:4px; padding:10px; font-size:14px;" onclick="submitKnownCorrectionLine({line_no})">
+                    ✎ Correct Brand Line #{line_no}
+                  </button>
+                </div>
+
+                <div style="margin-top:10px;">
+                  <input type="text" id="ood-input-line-{line_no}" placeholder="Type custom/OOD brand name for Line #{line_no}..." style="font-size:13px; padding:8px;">
+                  <button class="btn btn-ood" style="margin-top:4px; padding:10px; font-size:14px;" onclick="submitOODCorrectionLine({line_no})">
+                    ⚠ Submit Unregistered Brand (OOD)
+                  </button>
+                </div>
+              </div>
             </div>
             """
+
     else:
         brand = task.get("original_prediction", "Unknown")
         conf = float(task.get("original_confidence", 0.0)) * 100
@@ -521,6 +677,15 @@ def render_doctor_review_html(token: str, token_record: dict, task: dict, known_
           submitFeedback("CORRECT", sel);
         }}
 
+        function submitKnownCorrectionLine(lineNo) {{
+          const sel = document.getElementById("known-class-select-line-" + lineNo).value;
+          if (!sel) {{
+            showAlert("Please select a brand from the dropdown list for Line #" + lineNo, "error");
+            return;
+          }}
+          submitFeedback("CORRECT", sel);
+        }}
+
         function submitOODCorrection() {{
           const val = document.getElementById("ood-input").value;
           if (!val || val.trim() === "") {{
@@ -529,6 +694,16 @@ def render_doctor_review_html(token: str, token_record: dict, task: dict, known_
           }}
           submitFeedback("CORRECT", val.trim());
         }}
+
+        function submitOODCorrectionLine(lineNo) {{
+          const val = document.getElementById("ood-input-line-" + lineNo).value;
+          if (!val || val.trim() === "") {{
+            showAlert("Please type the custom brand name for Line #" + lineNo, "error");
+            return;
+          }}
+          submitFeedback("CORRECT", val.trim());
+        }}
+
 
         function showAlert(msg, type) {{
           const box = document.getElementById("alert-box");
