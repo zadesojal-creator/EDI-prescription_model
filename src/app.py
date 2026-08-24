@@ -21,6 +21,7 @@ from src.email_service import DoctorEmailNotifier
 from src.verified_dataset import VerifiedDatasetManager
 from src.admin_dashboard import AdminDashboardManager
 from src.model_registry import ModelRegistryManager
+from src.medicine_info_service import MedicineInfoService
 
 app = FastAPI(
     title="AI Handwritten Medicine Recognition & Continuous Learning System",
@@ -40,6 +41,11 @@ email_notifier = DoctorEmailNotifier()
 dataset_mgr = VerifiedDatasetManager()
 admin_mgr = AdminDashboardManager(verified_dataset_manager=dataset_mgr)
 registry_mgr = ModelRegistryManager()
+med_info_service = MedicineInfoService()
+
+class MedicineInfoRequest(BaseModel):
+    medicine_name: str = Field(..., description="Recognized or input medicine brand or generic name")
+
 
 # Pydantic Input Schemas
 class FeedbackSubmissionRequest(BaseModel):
@@ -196,6 +202,15 @@ def health_check():
         "docs_url": "/docs"
     }
 
+@app.post("/api/medicine/info")
+def get_medicine_info(payload: MedicineInfoRequest):
+    """
+    Retrieves standardized drug information, RxCUI, generic formulation,
+    indications/labelled uses, warnings, contraindications, adverse reactions,
+    and drug interactions using free public APIs (RxNorm & openFDA).
+    """
+    return med_info_service.get_medicine_info(payload.medicine_name)
+
 @app.post("/api/predict")
 async def predict_prescription(
     file: UploadFile = File(...),
@@ -204,7 +219,8 @@ async def predict_prescription(
     """
     Accepts an uploaded prescription image file.
     Runs Top-3 prediction, maps generic medicine, evaluates confidence level,
-    queues doctor review task, generates 24h token, and dispatches email notification.
+    queries RxNorm + openFDA for medicine information, queues doctor review task,
+    generates 24h token, and dispatches email notification.
     """
     if not file.content_type.startswith("image/"):
         raise HTTPException(status_code=400, detail="Uploaded file must be an image.")
@@ -219,6 +235,11 @@ async def predict_prescription(
     # 1. Run Multi-Line Prescription Inference & Segmentation
     full_prediction = predictor.predict_full_prescription(str(saved_path))
     active_model = registry_mgr.get_active_production_model()
+
+    # Enrich each medicine line with RxNorm + openFDA medicine info
+    for item in full_prediction.get("medicines", []):
+        pred_brand = item.get("prediction", {}).get("top_brand", "")
+        item["prediction"]["medicine_info"] = med_info_service.get_medicine_info(pred_brand)
 
     # Get primary prediction for doctor task creation (if single line use it, if multi-line use top line)
     primary_pred = full_prediction["medicines"][0]["prediction"]

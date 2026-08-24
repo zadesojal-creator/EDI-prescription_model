@@ -26,14 +26,14 @@ class PrescriptionLineSegmenter:
         """
         h, w = img.shape[:2]
         aspect_ratio = w / float(h)
-        # If image height is small (< 150px) or aspect ratio is very wide, treat as single word
         return h < 150 or aspect_ratio > 3.8
 
     def segment_prescription_lines(self, image_path: str) -> Dict:
         """
         Processes a prescription image:
-        - If single word, returns 1 medicine count.
-        - If full prescription page, segments all medicine lines, crops segment images, and returns total medicine count.
+        - If single word crop, returns 1 medicine count.
+        - If full prescription page, segments all medicine lines via Y-center clustering,
+          crops segment images, and returns total medicine count.
         """
         img_path = Path(image_path)
         if not img_path.exists():
@@ -63,7 +63,7 @@ class PrescriptionLineSegmenter:
         body_top = int(h * 0.18)
         body_bottom = int(h * 0.98)
         body_left = int(w * 0.03)
-        body_right = int(w * 0.90)
+        body_right = int(w * 0.95)
 
         body = img[body_top:body_bottom, body_left:body_right]
         bh_total, bw_total = body.shape[:2]
@@ -72,47 +72,59 @@ class PrescriptionLineSegmenter:
         blur = cv2.GaussianBlur(gray, (5, 5), 0)
         _, thresh = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
 
-        # Subtract long vertical lines (margins/doodles)
-        vert_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (1, int(bh_total * 0.20)))
+        # Subtract long vertical margin lines
+        vert_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (1, 35))
         vert_lines = cv2.morphologyEx(thresh, cv2.MORPH_OPEN, vert_kernel)
         thresh_clean = cv2.subtract(thresh, vert_lines)
 
-        # Horizontal dilation to merge words on the same line
-        horiz_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (int(bw_total * 0.08), 5))
-        dilated = cv2.dilate(thresh_clean, horiz_kernel, iterations=2)
+        # Apply narrow-height horizontal morphological dilation
+        kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (25, 3))
+        dilated = cv2.dilate(thresh_clean, kernel, iterations=2)
 
         contours, _ = cv2.findContours(dilated, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
         raw_boxes = []
         for c in contours:
-            x, y, bw_box, bh_box = cv2.boundingRect(c)
-            # Filter header noise & tiny dots
-            if bw_box > int(bw_total * 0.12) and bh_box > 15 and bh_box < int(bh_total * 0.35):
-                full_x = x + body_left
-                full_y = y + body_top
+            bx, by, bw_box, bh_box = cv2.boundingRect(c)
+            # Filter tiny dots and header noise
+            if bw_box > 45 and bh_box > 12 and bh_box < int(bh_total * 0.35):
+                full_x = bx + body_left
+                full_y = by + body_top
                 raw_boxes.append((full_x, full_y, bw_box, bh_box))
 
         # Sort top-to-bottom
         raw_boxes = sorted(raw_boxes, key=lambda b: b[1])
 
-        # Merge vertically overlapping bounding boxes (Y gap < 25px)
-        merged_boxes = []
+        # Cluster boxes into distinct medicine line bands based on Y center
+        line_clusters = []
         for b in raw_boxes:
-            if not merged_boxes:
-                merged_boxes.append(b)
-            else:
-                prev_x, prev_y, prev_w, prev_h = merged_boxes[-1]
-                curr_x, curr_y, curr_w, curr_h = b
-                if abs(curr_y - prev_y) < 28:
-                    new_x = min(prev_x, curr_x)
-                    new_y = min(prev_y, curr_y)
-                    new_w = max(prev_x + prev_w, curr_x + curr_w) - new_x
-                    new_h = max(prev_y + prev_h, curr_y + curr_h) - new_y
-                    merged_boxes[-1] = (new_x, new_y, new_w, new_h)
-                else:
-                    merged_boxes.append(b)
+            bx, by, bw_box, bh_box = b
+            y_center = by + bh_box / 2.0
+            matched = False
+            for cluster in line_clusters:
+                cluster_y_center = np.mean([cb[1] + cb[3]/2.0 for cb in cluster])
+                if abs(y_center - cluster_y_center) < 38:
+                    cluster.append(b)
+                    matched = True
+                    break
+            if not matched:
+                line_clusters.append([b])
 
-        # Fallback if no contours matched: treat entire body as 1 line
+        # Convert line clusters to merged bounding boxes
+        merged_boxes = []
+        for cluster in line_clusters:
+            min_x = min(b[0] for b in cluster)
+            min_y = min(b[1] for b in cluster)
+            max_x = max(b[0] + b[2] for b in cluster)
+            max_y = max(b[1] + b[3] for b in cluster)
+            bw_merged = max_x - min_x
+            bh_merged = max_y - min_y
+
+            # Keep only line bands that have substantial width (> 80px)
+            if bw_merged > 80:
+                merged_boxes.append((min_x, min_y, bw_merged, bh_merged))
+
+        # Fallback if no lines matched: treat entire body as 1 line
         if not merged_boxes:
             merged_boxes = [(body_left, body_top, bw_total, bh_total)]
 
@@ -121,11 +133,11 @@ class PrescriptionLineSegmenter:
         task_uuid = uuid.uuid4().hex[:8]
 
         for idx, (bx, by, bw_box, bh_box) in enumerate(merged_boxes, 1):
-            # Pad crop box by 10px safely
-            pad_y1 = max(0, by - 10)
-            pad_y2 = min(h, by + bh_box + 10)
-            pad_x1 = max(0, bx - 10)
-            pad_x2 = min(w, bx + bw_box + 10)
+            # Pad crop box by 12px safely
+            pad_y1 = max(0, by - 12)
+            pad_y2 = min(h, by + bh_box + 12)
+            pad_x1 = max(0, bx - 12)
+            pad_x2 = min(w, bx + bw_box + 12)
 
             crop = img[pad_y1:pad_y2, pad_x1:pad_x2]
             seg_filename = f"segment_{task_uuid}_line{idx}.png"

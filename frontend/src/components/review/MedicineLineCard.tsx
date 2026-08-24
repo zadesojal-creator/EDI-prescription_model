@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { MedicineLine } from '../../types';
 import { PriorityBadge } from '../common/PriorityBadge';
+import { MedicineInfoPanel } from './MedicineInfoPanel';
 
 interface MedicineLineCardProps {
   line: MedicineLine;
@@ -171,6 +172,9 @@ export const MedicineLineCard: React.FC<MedicineLineCardProps> = ({
           </div>
         )}
       </div>
+
+      {/* Free Medicine Information Panel (RxNorm + openFDA) */}
+      <MedicineInfoPanel info={pred.medicine_info} brandName={pred.top_brand} />
 
       {/* Action Buttons */}
       <div className="mt-4 pt-3 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-3 gap-2">

@@ -20,6 +20,28 @@ export interface MedicineCandidate {
   confidence: number;
 }
 
+export interface MedicineInfo {
+  status: 'SUCCESS' | 'LOW_CONFIDENCE' | 'API_UNAVAILABLE';
+  input_name: string;
+  normalized_name: string;
+  generic_name: string | null;
+  rxcui: string | null;
+  strength: string | null;
+  dosage_form: string | null;
+  match_confidence: number;
+  indications: string[];
+  warnings: string[];
+  contraindications: string[];
+  adverse_reactions: string[];
+  drug_interactions: string[];
+  source: {
+    normalization: string;
+    clinical_label: string;
+  };
+  requires_doctor_review: boolean;
+  message?: string;
+}
+
 export interface LinePrediction {
   top_brand: string;
   generic_name: string | null;
@@ -32,6 +54,7 @@ export interface LinePrediction {
   user_message: string;
   is_definitive_display: boolean;
   top_candidates: MedicineCandidate[];
+  medicine_info?: MedicineInfo;
 }
 
 export interface MedicineLine {
