@@ -1,0 +1,525 @@
+image_path,IMAGE,MEDICINE_NAME,GENERIC_NAME,source,source_split,raw_text,match_method,match_score,label
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\115.png,115.png,Baclofen,Baclofen,datasetHand,testing,,,,11
+D:\ediprjcursor\data\datasetHand\Training\training_words\524.png,524.png,Bacmax,Baclofen,datasetHand,training,,,,13
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P1823.jpg,P1823.jpg,Denixil,Clonazepam,RxHandBD-ML,train,Devixil,difflib,85.71428571428571,21
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\735.png,735.png,Telfast,Fexofenadine Hydrochloride,datasetHand,testing,,,,73
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\278.png,278.png,Etizin,Cetirizine Hydrochloride,datasetHand,testing,,,,27
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\156.png,156.png,Bicozin,Vitamin B Complex + Zinc,datasetHand,testing,,,,15
+D:\ediprjcursor\data\datasetHand\Training\training_words\269.png,269.png,Azithrocin,Azithromycin Dihydrate,datasetHand,training,,,,7
+D:\ediprjcursor\data\datasetHand\Training\training_words\1211.png,1211.png,Fexofast,Fexofenadine Hydrochloride,datasetHand,training,,,,31
+D:\ediprjcursor\data\datasetHand\Training\training_words\406.png,406.png,Backtone,Baclofen,datasetHand,training,,,,10
+D:\ediprjcursor\data\datasetHand\Training\training_words\1457.png,1457.png,Flexilax,Baclofen,datasetHand,training,,,,36
+D:\ediprjcursor\data\datasetHand\Training\training_words\2748.png,2748.png,Rivotril,Clonazepam,datasetHand,training,,,,68
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\428.png,428.png,Leptic,Clonazepam,datasetHand,testing,,,,42
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P4403.jpg,P4403.jpg,Maxpro,Esomeprazole,RxHandBD-ML,train,Maxpro,exact_clean,100.0,47
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\510.png,510.png,Montair,Montelukast Sodium,datasetHand,testing,,,,51
+D:\ediprjcursor\data\datasetHand\Training\training_words\1474.png,1474.png,Flexilax,Baclofen,datasetHand,training,,,,36
+D:\ediprjcursor\data\datasetHand\Training\training_words\1125.png,1125.png,Exium,Esomeprazole,datasetHand,training,,,,28
+D:\ediprjcursor\data\datasetHand\Training\training_words\1217.png,1217.png,Fexofast,Fexofenadine Hydrochloride,datasetHand,training,,,,31
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\114.png,114.png,Baclofen,Baclofen,datasetHand,validation,,,,11
+D:\ediprjcursor\data\RxHandBD-ML\Test_Set\P0938.jpg,P0938.jpg,Nexum,Esomeprazole,RxHandBD-ML,test,Nexum,exact_clean,100.0,57
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P2640.jpg,P2640.jpg,Napa,Paracetamol,RxHandBD-ML,train,Napa One,prefix,100.0,54
+D:\ediprjcursor\data\datasetHand\Training\training_words\871.png,871.png,Denixil,Clonazepam,datasetHand,training,,,,21
+D:\ediprjcursor\data\datasetHand\Training\training_words\1435.png,1435.png,Flexibac,Baclofen,datasetHand,training,,,,35
+D:\ediprjcursor\data\datasetHand\Training\training_words\3068.png,3068.png,Vifas,Fexofenadine Hydrochloride,datasetHand,training,,,,76
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\708.png,708.png,Rozith,Azithromycin Dihydrate,datasetHand,testing,,,,70
+D:\ediprjcursor\data\datasetHand\Training\training_words\2347.png,2347.png,Nidazyl,Metronidazole,datasetHand,training,,,,58
+D:\ediprjcursor\data\datasetHand\Training\training_words\2562.png,2562.png,Provair,Montelukast Sodium,datasetHand,training,,,,64
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\546.png,546.png,Napa Extend,Paracetamol,datasetHand,validation,,,,55
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\399.png,399.png,Ketoral,Ketoconazole (Tablet),datasetHand,testing,,,,39
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\204.png,204.png,Dancel,Ketoconazole (Shampoo),datasetHand,testing,,,,20
+D:\ediprjcursor\data\datasetHand\Training\training_words\345.png,345.png,Az,Azithromycin Dihydrate,datasetHand,training,,,,6
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\7.png,7.png,Aceta,Paracetamol,datasetHand,testing,,,,1
+D:\ediprjcursor\data\datasetHand\Training\training_words\3119.png,3119.png,Zithrin,Azithromycin Dihydrate,datasetHand,training,,,,77
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\40.png,40.png,Atrizin,Cetirizine Hydrochloride,datasetHand,validation,,,,4
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\142.png,142.png,Beklo,Baclofen,datasetHand,validation,,,,14
+D:\ediprjcursor\data\datasetHand\Training\training_words\2394.png,2394.png,Nizoder,Ketoconazole (Cream),datasetHand,training,,,,59
+D:\ediprjcursor\data\datasetHand\Training\training_words\2408.png,2408.png,Odmon,Montelukast Sodium,datasetHand,training,,,,60
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P4153.jpg,P4153.jpg,Maxima,Esomeprazole,RxHandBD-ML,train,Maxima,exact_clean,100.0,46
+D:\ediprjcursor\data\datasetHand\Training\training_words\395.png,395.png,Bacaid,Baclofen,datasetHand,training,,,,9
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\494.png,494.png,Metsina,Metronidazole,datasetHand,testing,,,,49
+D:\ediprjcursor\data\datasetHand\Training\training_words\2067.png,2067.png,Montair,Montelukast Sodium,datasetHand,training,,,,51
+D:\ediprjcursor\data\datasetHand\Training\training_words\549.png,549.png,Bacmax,Baclofen,datasetHand,training,,,,13
+D:\ediprjcursor\data\datasetHand\Training\training_words\512.png,512.png,Baclon,Baclofen,datasetHand,training,,,,12
+D:\ediprjcursor\data\datasetHand\Training\training_words\2400.png,2400.png,Odmon,Montelukast Sodium,datasetHand,training,,,,60
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\81.png,81.png,Az,Azithromycin Dihydrate,datasetHand,validation,,,,6
+D:\ediprjcursor\data\datasetHand\Training\training_words\1578.png,1578.png,Ketoral,Ketoconazole (Tablet),datasetHand,training,,,,39
+D:\ediprjcursor\data\datasetHand\Training\training_words\1126.png,1126.png,Exium,Esomeprazole,datasetHand,training,,,,28
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\187.png,187.png,Cetisoft,Cetirizine Hydrochloride,datasetHand,testing,,,,18
+D:\ediprjcursor\data\datasetHand\Training\training_words\2465.png,2465.png,Omastin,Fluconazole,datasetHand,training,,,,61
+D:\ediprjcursor\data\datasetHand\Training\training_words\2682.png,2682.png,Ritch,Fexofenadine Hydrochloride,datasetHand,training,,,,67
+D:\ediprjcursor\data\datasetHand\Training\training_words\2675.png,2675.png,Rhinil,Cetirizine Hydrochloride,datasetHand,training,,,,66
+D:\ediprjcursor\data\datasetHand\Training\training_words\3101.png,3101.png,Zithrin,Azithromycin Dihydrate,datasetHand,training,,,,77
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\717.png,717.png,Sergel,Esomeprazole,datasetHand,testing,,,,71
+D:\ediprjcursor\data\datasetHand\Training\training_words\219.png,219.png,Axodin,Fexofenadine Hydrochloride,datasetHand,training,,,,5
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P3510.jpg,P3510.jpg,Napa Extend,Paracetamol,RxHandBD-ML,train,Napa,exact_clean,100.0,55
+D:\ediprjcursor\data\datasetHand\Training\training_words\1561.png,1561.png,Ketoral,Ketoconazole (Tablet),datasetHand,training,,,,39
+D:\ediprjcursor\data\datasetHand\Training\training_words\1886.png,1886.png,Maxpro,Esomeprazole,datasetHand,training,,,,47
+D:\ediprjcursor\data\datasetHand\Training\training_words\1860.png,1860.png,Maxima,Esomeprazole,datasetHand,training,,,,46
+D:\ediprjcursor\data\datasetHand\Training\training_words\1675.png,1675.png,Ketozol,Ketoconazole (Shampoo),datasetHand,training,,,,41
+D:\ediprjcursor\data\datasetHand\Training\training_words\408.png,408.png,Backtone,Baclofen,datasetHand,training,,,,10
+D:\ediprjcursor\data\datasetHand\Training\training_words\2690.png,2690.png,Ritch,Fexofenadine Hydrochloride,datasetHand,training,,,,67
+D:\ediprjcursor\data\datasetHand\Training\training_words\931.png,931.png,Dinafex,Fexofenadine Hydrochloride,datasetHand,training,,,,23
+D:\ediprjcursor\data\datasetHand\Training\training_words\896.png,896.png,Diflu,Fluconazole,datasetHand,training,,,,22
+D:\ediprjcursor\data\datasetHand\Training\training_words\881.png,881.png,Diflu,Fluconazole,datasetHand,training,,,,22
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P2869.jpg,P2869.jpg,Nexum,Esomeprazole,RxHandBD-ML,train,Nexum,exact_clean,100.0,57
+D:\ediprjcursor\data\datasetHand\Training\training_words\2281.png,2281.png,Nexum,Esomeprazole,datasetHand,training,,,,57
+D:\ediprjcursor\data\datasetHand\Training\training_words\1773.png,1773.png,Lumona,Montelukast Sodium,datasetHand,training,,,,44
+D:\ediprjcursor\data\datasetHand\Training\training_words\1788.png,1788.png,Lumona,Montelukast Sodium,datasetHand,training,,,,44
+D:\ediprjcursor\data\datasetHand\Training\training_words\708.png,708.png,Candinil,Fluconazole,datasetHand,training,,,,17
+D:\ediprjcursor\data\datasetHand\Training\training_words\1940.png,1940.png,Metro,Metronidazole,datasetHand,training,,,,48
+D:\ediprjcursor\data\datasetHand\Training\training_words\3058.png,3058.png,Vifas,Fexofenadine Hydrochloride,datasetHand,training,,,,76
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\524.png,524.png,Montene,Montelukast Sodium,datasetHand,testing,,,,52
+D:\ediprjcursor\data\datasetHand\Training\training_words\2288.png,2288.png,Nexum,Esomeprazole,datasetHand,training,,,,57
+D:\ediprjcursor\data\datasetHand\Training\training_words\956.png,956.png,Dinafex,Fexofenadine Hydrochloride,datasetHand,training,,,,23
+D:\ediprjcursor\data\datasetHand\Training\training_words\1636.png,1636.png,Ketotab,Ketoconazole (Tablet),datasetHand,training,,,,40
+D:\ediprjcursor\data\datasetHand\Training\training_words\211.png,211.png,Axodin,Fexofenadine Hydrochloride,datasetHand,training,,,,5
+D:\ediprjcursor\data\datasetHand\Training\training_words\1815.png,1815.png,M-Kast,Montelukast Sodium,datasetHand,training,,,,45
+D:\ediprjcursor\data\datasetHand\Training\training_words\192.png,192.png,Atrizin,Cetirizine Hydrochloride,datasetHand,training,,,,4
+D:\ediprjcursor\data\RxHandBD-ML\Test_Set\P0739.jpg,P0739.jpg,Denixil,Clonazepam,RxHandBD-ML,test,denixil,exact_clean,100.0,21
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P3110.jpg,P3110.jpg,Monas,Montelukast Sodium,RxHandBD-ML,train,Monas,exact_clean,100.0,50
+D:\ediprjcursor\data\datasetHand\Training\training_words\2245.png,2245.png,Nexcap,Esomeprazole,datasetHand,training,,,,56
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\445.png,445.png,Lumona,Montelukast Sodium,datasetHand,validation,,,,44
+D:\ediprjcursor\data\datasetHand\Training\training_words\2921.png,2921.png,Telfast,Fexofenadine Hydrochloride,datasetHand,training,,,,73
+D:\ediprjcursor\data\datasetHand\Training\training_words\2037.png,2037.png,Monas,Montelukast Sodium,datasetHand,training,,,,50
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\113.png,113.png,Baclofen,Baclofen,datasetHand,testing,,,,11
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\353.png,353.png,Flexibac,Baclofen,datasetHand,validation,,,,35
+D:\ediprjcursor\data\datasetHand\Training\training_words\262.png,262.png,Azithrocin,Azithromycin Dihydrate,datasetHand,training,,,,7
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\74.png,74.png,Azyth,Azithromycin Dihydrate,datasetHand,validation,,,,8
+D:\ediprjcursor\data\datasetHand\Training\training_words\831.png,831.png,Dancel,Ketoconazole (Shampoo),datasetHand,training,,,,20
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\532.png,532.png,Montex,Montelukast Sodium,datasetHand,testing,,,,53
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\377.png,377.png,Flugal,Fluconazole,datasetHand,testing,,,,37
+D:\ediprjcursor\data\datasetHand\Training\training_words\2121.png,2121.png,Montex,Montelukast Sodium,datasetHand,training,,,,53
+D:\ediprjcursor\data\datasetHand\Training\training_words\822.png,822.png,Dancel,Ketoconazole (Shampoo),datasetHand,training,,,,20
+D:\ediprjcursor\data\datasetHand\Training\training_words\283.png,283.png,Azyth,Azithromycin Dihydrate,datasetHand,training,,,,8
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\27.png,27.png,Alatrol,Cetirizine Hydrochloride,datasetHand,testing,,,,2
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\433.png,433.png,Lucan-R,Fluconazole,datasetHand,validation,,,,43
+D:\ediprjcursor\data\RxHandBD-ML\Test_Set\P0863.jpg,P0863.jpg,Nexum,Esomeprazole,RxHandBD-ML,test,Nexum,exact_clean,100.0,57
+D:\ediprjcursor\data\datasetHand\Training\training_words\1850.png,1850.png,Maxima,Esomeprazole,datasetHand,training,,,,46
+D:\ediprjcursor\data\datasetHand\Training\training_words\665.png,665.png,Canazole,Fluconazole,datasetHand,training,,,,16
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\145.png,145.png,Beklo,Baclofen,datasetHand,testing,,,,14
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\338.png,338.png,Fixal,Fexofenadine Hydrochloride,datasetHand,testing,,,,33
+D:\ediprjcursor\data\datasetHand\Training\training_words\1073.png,1073.png,Esoral,Esomeprazole,datasetHand,training,,,,26
+D:\ediprjcursor\data\datasetHand\Training\training_words\812.png,812.png,Dancel,Ketoconazole (Shampoo),datasetHand,training,,,,20
+D:\ediprjcursor\data\datasetHand\Training\training_words\116.png,116.png,Alatrol,Cetirizine Hydrochloride,datasetHand,training,,,,2
+D:\ediprjcursor\data\datasetHand\Training\training_words\1967.png,1967.png,Metsina,Metronidazole,datasetHand,training,,,,49
+D:\ediprjcursor\data\datasetHand\Training\training_words\3027.png,3027.png,Trilock,Montelukast Sodium,datasetHand,training,,,,75
+D:\ediprjcursor\data\datasetHand\Training\training_words\2905.png,2905.png,Tamen,Paracetamol,datasetHand,training,,,,72
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\677.png,677.png,Ritch,Fexofenadine Hydrochloride,datasetHand,validation,,,,67
+D:\ediprjcursor\data\datasetHand\Training\training_words\3032.png,3032.png,Trilock,Montelukast Sodium,datasetHand,training,,,,75
+D:\ediprjcursor\data\datasetHand\Training\training_words\1829.png,1829.png,M-Kast,Montelukast Sodium,datasetHand,training,,,,45
+D:\ediprjcursor\data\datasetHand\Training\training_words\2336.png,2336.png,Nidazyl,Metronidazole,datasetHand,training,,,,58
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\580.png,580.png,Nidazyl,Metronidazole,datasetHand,validation,,,,58
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\237.png,237.png,Dinafex,Fexofenadine Hydrochloride,datasetHand,testing,,,,23
+D:\ediprjcursor\data\datasetHand\Training\training_words\768.png,768.png,Conaz,Fluconazole,datasetHand,training,,,,19
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\388.png,388.png,Ketocon,Ketoconazole (Shampoo),datasetHand,testing,,,,38
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\770.png,770.png,Zithrin,Azithromycin Dihydrate,datasetHand,testing,,,,77
+D:\ediprjcursor\data\datasetHand\Training\training_words\700.png,700.png,Candinil,Fluconazole,datasetHand,training,,,,17
+D:\ediprjcursor\data\datasetHand\Training\training_words\2179.png,2179.png,Napa Extend,Paracetamol,datasetHand,training,,,,55
+D:\ediprjcursor\data\datasetHand\Training\training_words\1188.png,1188.png,Fenadin,Fexofenadine Hydrochloride,datasetHand,training,,,,29
+D:\ediprjcursor\data\datasetHand\Training\training_words\2250.png,2250.png,Nexcap,Esomeprazole,datasetHand,training,,,,56
+D:\ediprjcursor\data\datasetHand\Training\training_words\2522.png,2522.png,Progut,Esomeprazole,datasetHand,training,,,,63
+D:\ediprjcursor\data\datasetHand\Training\training_words\2539.png,2539.png,Progut,Esomeprazole,datasetHand,training,,,,63
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\765.png,765.png,Vifas,Fexofenadine Hydrochloride,datasetHand,validation,,,,76
+D:\ediprjcursor\data\datasetHand\Training\training_words\1222.png,1222.png,Fexofast,Fexofenadine Hydrochloride,datasetHand,training,,,,31
+D:\ediprjcursor\data\datasetHand\Training\training_words\985.png,985.png,Disopan,Clonazepam,datasetHand,training,,,,24
+D:\ediprjcursor\data\datasetHand\Training\training_words\2149.png,2149.png,Montex,Montelukast Sodium,datasetHand,training,,,,53
+D:\ediprjcursor\data\datasetHand\Training\training_words\994.png,994.png,Disopan,Clonazepam,datasetHand,training,,,,24
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\712.png,712.png,Sergel,Esomeprazole,datasetHand,validation,,,,71
+D:\ediprjcursor\data\datasetHand\Training\training_words\1064.png,1064.png,Esoral,Esomeprazole,datasetHand,training,,,,26
+D:\ediprjcursor\data\datasetHand\Training\training_words\2843.png,2843.png,Sergel,Esomeprazole,datasetHand,training,,,,71
+D:\ediprjcursor\data\datasetHand\Training\training_words\2604.png,2604.png,Renova,Paracetamol,datasetHand,training,,,,65
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\354.png,354.png,Flexibac,Baclofen,datasetHand,validation,,,,35
+D:\ediprjcursor\data\datasetHand\Training\training_words\1769.png,1769.png,Lumona,Montelukast Sodium,datasetHand,training,,,,44
+D:\ediprjcursor\data\RxHandBD-ML\Test_Set\P0010.jpg,P0010.jpg,Napa Extend,Paracetamol,RxHandBD-ML,test,Napa,exact_clean,100.0,55
+D:\ediprjcursor\data\datasetHand\Training\training_words\2697.png,2697.png,Ritch,Fexofenadine Hydrochloride,datasetHand,training,,,,67
+D:\ediprjcursor\data\datasetHand\Training\training_words\659.png,659.png,Canazole,Fluconazole,datasetHand,training,,,,16
+D:\ediprjcursor\data\datasetHand\Training\training_words\267.png,267.png,Azithrocin,Azithromycin Dihydrate,datasetHand,training,,,,7
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\399.png,399.png,Ketoral,Ketoconazole (Tablet),datasetHand,validation,,,,39
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\170.png,170.png,Candinil,Fluconazole,datasetHand,validation,,,,17
+D:\ediprjcursor\data\datasetHand\Training\training_words\1245.png,1245.png,Fexo,Fexofenadine Hydrochloride,datasetHand,training,,,,30
+D:\ediprjcursor\data\datasetHand\Training\training_words\2237.png,2237.png,Napa,Paracetamol,datasetHand,training,,,,54
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\665.png,665.png,Rhinil,Cetirizine Hydrochloride,datasetHand,testing,,,,66
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\164.png,164.png,Canazole,Fluconazole,datasetHand,validation,,,,16
+D:\ediprjcursor\data\datasetHand\Training\training_words\2895.png,2895.png,Tamen,Paracetamol,datasetHand,training,,,,72
+D:\ediprjcursor\data\datasetHand\Training\training_words\2029.png,2029.png,Monas,Montelukast Sodium,datasetHand,training,,,,50
+D:\ediprjcursor\data\datasetHand\Training\training_words\2982.png,2982.png,Tridosil,Azithromycin Dihydrate,datasetHand,training,,,,74
+D:\ediprjcursor\data\datasetHand\Training\training_words\60.png,60.png,Ace,Paracetamol,datasetHand,training,,,,0
+D:\ediprjcursor\data\datasetHand\Training\training_words\603.png,603.png,Bicozin,Vitamin B Complex + Zinc,datasetHand,training,,,,15
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\519.png,519.png,Montair,Montelukast Sodium,datasetHand,testing,,,,51
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\149.png,149.png,Beklo,Baclofen,datasetHand,validation,,,,14
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P2920.jpg,P2920.jpg,Nexum,Esomeprazole,RxHandBD-ML,train,Nexum,exact_clean,100.0,57
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\139.png,139.png,Bacmax,Baclofen,datasetHand,validation,,,,13
+D:\ediprjcursor\data\datasetHand\Training\training_words\1403.png,1403.png,Flexibac,Baclofen,datasetHand,training,,,,35
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\195.png,195.png,Conaz,Fluconazole,datasetHand,validation,,,,19
+D:\ediprjcursor\data\datasetHand\Training\training_words\511.png,511.png,Baclon,Baclofen,datasetHand,training,,,,12
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\325.png,325.png,Filmet,Metronidazole,datasetHand,testing,,,,32
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\88.png,88.png,Az,Azithromycin Dihydrate,datasetHand,testing,,,,6
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\381.png,381.png,Ketocon,Ketoconazole (Shampoo),datasetHand,testing,,,,38
+D:\ediprjcursor\data\datasetHand\Training\training_words\1328.png,1328.png,Fixal,Fexofenadine Hydrochloride,datasetHand,training,,,,33
+D:\ediprjcursor\data\datasetHand\Training\training_words\876.png,876.png,Denixil,Clonazepam,datasetHand,training,,,,21
+D:\ediprjcursor\data\datasetHand\Training\training_words\672.png,672.png,Canazole,Fluconazole,datasetHand,training,,,,16
+D:\ediprjcursor\data\datasetHand\Training\training_words\1660.png,1660.png,Ketozol,Ketoconazole (Shampoo),datasetHand,training,,,,41
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P5278.jpg,P5278.jpg,Metro,Metronidazole,RxHandBD-ML,train,metro,exact_clean,100.0,48
+D:\ediprjcursor\data\datasetHand\Training\training_words\2957.png,2957.png,Telfast,Fexofenadine Hydrochloride,datasetHand,training,,,,73
+D:\ediprjcursor\data\datasetHand\Training\training_words\1533.png,1533.png,Ketocon,Ketoconazole (Shampoo),datasetHand,training,,,,38
+D:\ediprjcursor\data\datasetHand\Training\training_words\612.png,612.png,Bicozin,Vitamin B Complex + Zinc,datasetHand,training,,,,15
+D:\ediprjcursor\data\datasetHand\Training\training_words\687.png,687.png,Candinil,Fluconazole,datasetHand,training,,,,17
+D:\ediprjcursor\data\datasetHand\Training\training_words\1895.png,1895.png,Maxpro,Esomeprazole,datasetHand,training,,,,47
+D:\ediprjcursor\data\RxHandBD-ML\Test_Set\P0662.jpg,P0662.jpg,Fexo,Fexofenadine Hydrochloride,RxHandBD-ML,test,fexo,exact_clean,100.0,30
+D:\ediprjcursor\data\datasetHand\Training\training_words\1347.png,1347.png,Fixal,Fexofenadine Hydrochloride,datasetHand,training,,,,33
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\485.png,485.png,Metro,Metronidazole,datasetHand,validation,,,,48
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\618.png,618.png,Omastin,Fluconazole,datasetHand,testing,,,,61
+D:\ediprjcursor\data\datasetHand\Training\training_words\3039.png,3039.png,Trilock,Montelukast Sodium,datasetHand,training,,,,75
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P1374.jpg,P1374.jpg,Denixil,Clonazepam,RxHandBD-ML,train,Devixil,difflib,85.71428571428571,21
+D:\ediprjcursor\data\datasetHand\Training\training_words\1709.png,1709.png,Leptic,Clonazepam,datasetHand,training,,,,42
+D:\ediprjcursor\data\RxHandBD-ML\Test_Set\P0198.jpg,P0198.jpg,Beklo,Baclofen,RxHandBD-ML,test,Beklo,exact_clean,100.0,14
+D:\ediprjcursor\data\datasetHand\Training\training_words\2370.png,2370.png,Nizoder,Ketoconazole (Cream),datasetHand,training,,,,59
+D:\ediprjcursor\data\datasetHand\Training\training_words\721.png,721.png,Cetisoft,Cetirizine Hydrochloride,datasetHand,training,,,,18
+D:\ediprjcursor\data\datasetHand\Training\training_words\2722.png,2722.png,Rivotril,Clonazepam,datasetHand,training,,,,68
+D:\ediprjcursor\data\datasetHand\Training\training_words\2435.png,2435.png,Odmon,Montelukast Sodium,datasetHand,training,,,,60
+D:\ediprjcursor\data\datasetHand\Training\training_words\2757.png,2757.png,Rivotril,Clonazepam,datasetHand,training,,,,68
+D:\ediprjcursor\data\datasetHand\Training\training_words\2187.png,2187.png,Napa Extend,Paracetamol,datasetHand,training,,,,55
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\351.png,351.png,Flexibac,Baclofen,datasetHand,validation,,,,35
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P2492.jpg,P2492.jpg,Flugal,Fluconazole,RxHandBD-ML,train,Flugal,exact_clean,100.0,37
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\431.png,431.png,Lucan-R,Fluconazole,datasetHand,validation,,,,43
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\614.png,614.png,Omastin,Fluconazole,datasetHand,validation,,,,61
+D:\ediprjcursor\data\datasetHand\Training\training_words\1299.png,1299.png,Filmet,Metronidazole,datasetHand,training,,,,32
+D:\ediprjcursor\data\datasetHand\Training\training_words\1866.png,1866.png,Maxima,Esomeprazole,datasetHand,training,,,,46
+D:\ediprjcursor\data\datasetHand\Training\training_words\2850.png,2850.png,Sergel,Esomeprazole,datasetHand,training,,,,71
+D:\ediprjcursor\data\datasetHand\Training\training_words\2479.png,2479.png,Omastin,Fluconazole,datasetHand,training,,,,61
+D:\ediprjcursor\data\datasetHand\Training\training_words\799.png,799.png,Conaz,Fluconazole,datasetHand,training,,,,19
+D:\ediprjcursor\data\datasetHand\Training\training_words\1316.png,1316.png,Filmet,Metronidazole,datasetHand,training,,,,32
+D:\ediprjcursor\data\datasetHand\Training\training_words\1324.png,1324.png,Fixal,Fexofenadine Hydrochloride,datasetHand,training,,,,33
+D:\ediprjcursor\data\datasetHand\Training\training_words\1962.png,1962.png,Metsina,Metronidazole,datasetHand,training,,,,49
+D:\ediprjcursor\data\datasetHand\Training\training_words\1092.png,1092.png,Etizin,Cetirizine Hydrochloride,datasetHand,training,,,,27
+D:\ediprjcursor\data\datasetHand\Training\training_words\3097.png,3097.png,Zithrin,Azithromycin Dihydrate,datasetHand,training,,,,77
+D:\ediprjcursor\data\datasetHand\Training\training_words\1701.png,1701.png,Leptic,Clonazepam,datasetHand,training,,,,42
+D:\ediprjcursor\data\datasetHand\Training\training_words\1385.png,1385.png,Flamyd,Metronidazole,datasetHand,training,,,,34
+D:\ediprjcursor\data\datasetHand\Training\training_words\298.png,298.png,Azyth,Azithromycin Dihydrate,datasetHand,training,,,,8
+D:\ediprjcursor\data\datasetHand\Training\training_words\2842.png,2842.png,Sergel,Esomeprazole,datasetHand,training,,,,71
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\328.png,328.png,Filmet,Metronidazole,datasetHand,validation,,,,32
+D:\ediprjcursor\data\datasetHand\Training\training_words\1616.png,1616.png,Ketotab,Ketoconazole (Tablet),datasetHand,training,,,,40
+D:\ediprjcursor\data\datasetHand\Training\training_words\25.png,25.png,Aceta,Paracetamol,datasetHand,training,,,,1
+D:\ediprjcursor\data\datasetHand\Training\training_words\303.png,303.png,Azyth,Azithromycin Dihydrate,datasetHand,training,,,,8
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\153.png,153.png,Bicozin,Vitamin B Complex + Zinc,datasetHand,validation,,,,15
+D:\ediprjcursor\data\datasetHand\Training\training_words\2244.png,2244.png,Nexcap,Esomeprazole,datasetHand,training,,,,56
+D:\ediprjcursor\data\datasetHand\Training\training_words\1091.png,1091.png,Etizin,Cetirizine Hydrochloride,datasetHand,training,,,,27
+D:\ediprjcursor\data\datasetHand\Training\training_words\1776.png,1776.png,Lumona,Montelukast Sodium,datasetHand,training,,,,44
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\604.png,604.png,Odmon,Montelukast Sodium,datasetHand,validation,,,,60
+D:\ediprjcursor\data\datasetHand\Training\training_words\2384.png,2384.png,Nizoder,Ketoconazole (Cream),datasetHand,training,,,,59
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\458.png,458.png,M-Kast,Montelukast Sodium,datasetHand,validation,,,,45
+D:\ediprjcursor\data\datasetHand\Training\training_words\1371.png,1371.png,Flamyd,Metronidazole,datasetHand,training,,,,34
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\21.png,21.png,Alatrol,Cetirizine Hydrochloride,datasetHand,validation,,,,2
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\433.png,433.png,Lucan-R,Fluconazole,datasetHand,testing,,,,43
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\31.png,31.png,Amodis,Metronidazole,datasetHand,testing,,,,3
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P3587.jpg,P3587.jpg,Napa Extend,Paracetamol,RxHandBD-ML,train,Napa,exact_clean,100.0,55
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\106.png,106.png,Backtone,Baclofen,datasetHand,validation,,,,10
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\452.png,452.png,M-Kast,Montelukast Sodium,datasetHand,validation,,,,45
+D:\ediprjcursor\data\datasetHand\Training\training_words\1265.png,1265.png,Fexo,Fexofenadine Hydrochloride,datasetHand,training,,,,30
+D:\ediprjcursor\data\datasetHand\Training\training_words\1008.png,1008.png,Esonix,Esomeprazole,datasetHand,training,,,,25
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\390.png,390.png,Ketoral,Ketoconazole (Tablet),datasetHand,testing,,,,39
+D:\ediprjcursor\data\datasetHand\Training\training_words\1079.png,1079.png,Esoral,Esomeprazole,datasetHand,training,,,,26
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P3139.jpg,P3139.jpg,Napa Extend,Paracetamol,RxHandBD-ML,train,Napa,exact_clean,100.0,55
+D:\ediprjcursor\data\datasetHand\Training\training_words\3029.png,3029.png,Trilock,Montelukast Sodium,datasetHand,training,,,,75
+D:\ediprjcursor\data\datasetHand\Training\training_words\66.png,66.png,Ace,Paracetamol,datasetHand,training,,,,0
+D:\ediprjcursor\data\datasetHand\Training\training_words\3059.png,3059.png,Vifas,Fexofenadine Hydrochloride,datasetHand,training,,,,76
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\315.png,315.png,Fexo,Fexofenadine Hydrochloride,datasetHand,validation,,,,30
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\696.png,696.png,Romycin,Azithromycin Dihydrate (Ophthalmic),datasetHand,testing,,,,69
+D:\ediprjcursor\data\datasetHand\Training\training_words\2042.png,2042.png,Montair,Montelukast Sodium,datasetHand,training,,,,51
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\18.png,18.png,Ace,Paracetamol,datasetHand,validation,,,,0
+D:\ediprjcursor\data\datasetHand\Training\training_words\1509.png,1509.png,Flugal,Fluconazole,datasetHand,training,,,,37
+D:\ediprjcursor\data\datasetHand\Training\training_words\2575.png,2575.png,Provair,Montelukast Sodium,datasetHand,training,,,,64
+D:\ediprjcursor\data\datasetHand\Training\training_words\645.png,645.png,Canazole,Fluconazole,datasetHand,training,,,,16
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\326.png,326.png,Filmet,Metronidazole,datasetHand,validation,,,,32
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\739.png,739.png,Telfast,Fexofenadine Hydrochloride,datasetHand,testing,,,,73
+D:\ediprjcursor\data\datasetHand\Training\training_words\156.png,156.png,Amodis,Metronidazole,datasetHand,training,,,,3
+D:\ediprjcursor\data\datasetHand\Training\training_words\1396.png,1396.png,Flamyd,Metronidazole,datasetHand,training,,,,34
+D:\ediprjcursor\data\datasetHand\Training\training_words\3113.png,3113.png,Zithrin,Azithromycin Dihydrate,datasetHand,training,,,,77
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\299.png,299.png,Fenadin,Fexofenadine Hydrochloride,datasetHand,testing,,,,29
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P3337.jpg,P3337.jpg,Rivotril,Clonazepam,RxHandBD-ML,train,Rivotril,exact_clean,100.0,68
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\200.png,200.png,Dancel,Ketoconazole (Shampoo),datasetHand,testing,,,,20
+D:\ediprjcursor\data\datasetHand\Training\training_words\2157.png,2157.png,Montex,Montelukast Sodium,datasetHand,training,,,,53
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\593.png,593.png,Nizoder,Ketoconazole (Cream),datasetHand,validation,,,,59
+D:\ediprjcursor\data\datasetHand\Training\training_words\198.png,198.png,Atrizin,Cetirizine Hydrochloride,datasetHand,training,,,,4
+D:\ediprjcursor\data\datasetHand\Training\training_words\1214.png,1214.png,Fexofast,Fexofenadine Hydrochloride,datasetHand,training,,,,31
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\437.png,437.png,Lucan-R,Fluconazole,datasetHand,testing,,,,43
+D:\ediprjcursor\data\datasetHand\Training\training_words\522.png,522.png,Bacmax,Baclofen,datasetHand,training,,,,13
+D:\ediprjcursor\data\datasetHand\Training\training_words\2738.png,2738.png,Rivotril,Clonazepam,datasetHand,training,,,,68
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\690.png,690.png,Romycin,Azithromycin Dihydrate (Ophthalmic),datasetHand,testing,,,,69
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\213.png,213.png,Denixil,Clonazepam,datasetHand,testing,,,,21
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\55.png,55.png,Axodin,Fexofenadine Hydrochloride,datasetHand,testing,,,,5
+D:\ediprjcursor\data\datasetHand\Training\training_words\741.png,741.png,Cetisoft,Cetirizine Hydrochloride,datasetHand,training,,,,18
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\128.png,128.png,Baclon,Baclofen,datasetHand,testing,,,,12
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\243.png,243.png,Disopan,Clonazepam,datasetHand,validation,,,,24
+D:\ediprjcursor\data\RxHandBD-ML\Test_Set\P0455.jpg,P0455.jpg,Rivotril,Clonazepam,RxHandBD-ML,test,Rivo,prefix,100.0,68
+D:\ediprjcursor\data\datasetHand\Training\training_words\788.png,788.png,Conaz,Fluconazole,datasetHand,training,,,,19
+D:\ediprjcursor\data\datasetHand\Training\training_words\3002.png,3002.png,Trilock,Montelukast Sodium,datasetHand,training,,,,75
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\478.png,478.png,Maxpro,Esomeprazole,datasetHand,testing,,,,47
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\575.png,575.png,Nexum,Esomeprazole,datasetHand,testing,,,,57
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\748.png,748.png,Tridosil,Azithromycin Dihydrate,datasetHand,testing,,,,74
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\555.png,555.png,Napa,Paracetamol,datasetHand,testing,,,,54
+D:\ediprjcursor\data\datasetHand\Training\training_words\170.png,170.png,Atrizin,Cetirizine Hydrochloride,datasetHand,training,,,,4
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\99.png,99.png,Bacaid,Baclofen,datasetHand,testing,,,,9
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\126.png,126.png,Baclon,Baclofen,datasetHand,validation,,,,12
+D:\ediprjcursor\data\datasetHand\Training\training_words\872.png,872.png,Denixil,Clonazepam,datasetHand,training,,,,21
+D:\ediprjcursor\data\datasetHand\Training\training_words\202.png,202.png,Axodin,Fexofenadine Hydrochloride,datasetHand,training,,,,5
+D:\ediprjcursor\data\datasetHand\Training\training_words\2171.png,2171.png,Napa Extend,Paracetamol,datasetHand,training,,,,55
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\487.png,487.png,Metro,Metronidazole,datasetHand,validation,,,,48
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P4975.jpg,P4975.jpg,Renova,Paracetamol,RxHandBD-ML,train,renova,exact_clean,100.0,65
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\557.png,557.png,Napa,Paracetamol,datasetHand,validation,,,,54
+D:\ediprjcursor\data\datasetHand\Training\training_words\1054.png,1054.png,Esoral,Esomeprazole,datasetHand,training,,,,26
+D:\ediprjcursor\data\datasetHand\Training\training_words\1225.png,1225.png,Fexofast,Fexofenadine Hydrochloride,datasetHand,training,,,,31
+D:\ediprjcursor\data\datasetHand\Training\training_words\1097.png,1097.png,Etizin,Cetirizine Hydrochloride,datasetHand,training,,,,27
+D:\ediprjcursor\data\datasetHand\Training\training_words\1735.png,1735.png,Lucan-R,Fluconazole,datasetHand,training,,,,43
+D:\ediprjcursor\data\datasetHand\Training\training_words\1670.png,1670.png,Ketozol,Ketoconazole (Shampoo),datasetHand,training,,,,41
+D:\ediprjcursor\data\datasetHand\Training\training_words\2948.png,2948.png,Telfast,Fexofenadine Hydrochloride,datasetHand,training,,,,73
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P2274.jpg,P2274.jpg,Nexum,Esomeprazole,RxHandBD-ML,train,Nexum,exact_clean,100.0,57
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\39.png,39.png,Amodis,Metronidazole,datasetHand,testing,,,,3
+D:\ediprjcursor\data\datasetHand\Training\training_words\2616.png,2616.png,Renova,Paracetamol,datasetHand,training,,,,65
+D:\ediprjcursor\data\datasetHand\Training\training_words\1889.png,1889.png,Maxpro,Esomeprazole,datasetHand,training,,,,47
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\629.png,629.png,Opton,Esomeprazole,datasetHand,testing,,,,62
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P3929.jpg,P3929.jpg,Fexo,Fexofenadine Hydrochloride,RxHandBD-ML,train,Fexo,exact_clean,100.0,30
+D:\ediprjcursor\data\datasetHand\Training\training_words\1387.png,1387.png,Flamyd,Metronidazole,datasetHand,training,,,,34
+D:\ediprjcursor\data\datasetHand\Training\training_words\1487.png,1487.png,Flugal,Fluconazole,datasetHand,training,,,,37
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\318.png,318.png,Fexo,Fexofenadine Hydrochloride,datasetHand,validation,,,,30
+D:\ediprjcursor\data\datasetHand\Training\training_words\1756.png,1756.png,Lucan-R,Fluconazole,datasetHand,training,,,,43
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\558.png,558.png,Napa,Paracetamol,datasetHand,validation,,,,54
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\342.png,342.png,Flamyd,Metronidazole,datasetHand,testing,,,,34
+D:\ediprjcursor\data\datasetHand\Training\training_words\377.png,377.png,Bacaid,Baclofen,datasetHand,training,,,,9
+D:\ediprjcursor\data\datasetHand\Training\training_words\2553.png,2553.png,Progut,Esomeprazole,datasetHand,training,,,,63
+D:\ediprjcursor\data\datasetHand\Training\training_words\1845.png,1845.png,Maxima,Esomeprazole,datasetHand,training,,,,46
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\124.png,124.png,Baclon,Baclofen,datasetHand,testing,,,,12
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\252.png,252.png,Esonix,Esomeprazole,datasetHand,validation,,,,25
+D:\ediprjcursor\data\datasetHand\Training\training_words\2090.png,2090.png,Montene,Montelukast Sodium,datasetHand,training,,,,52
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\775.png,775.png,Zithrin,Azithromycin Dihydrate,datasetHand,testing,,,,77
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\21.png,21.png,Alatrol,Cetirizine Hydrochloride,datasetHand,testing,,,,2
+D:\ediprjcursor\data\datasetHand\Training\training_words\1442.png,1442.png,Flexilax,Baclofen,datasetHand,training,,,,36
+D:\ediprjcursor\data\datasetHand\Training\training_words\723.png,723.png,Cetisoft,Cetirizine Hydrochloride,datasetHand,training,,,,18
+D:\ediprjcursor\data\datasetHand\Training\training_words\2673.png,2673.png,Rhinil,Cetirizine Hydrochloride,datasetHand,training,,,,66
+D:\ediprjcursor\data\datasetHand\Training\training_words\265.png,265.png,Azithrocin,Azithromycin Dihydrate,datasetHand,training,,,,7
+D:\ediprjcursor\data\datasetHand\Training\training_words\92.png,92.png,Alatrol,Cetirizine Hydrochloride,datasetHand,training,,,,2
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P1868.jpg,P1868.jpg,Montene,Montelukast Sodium,RxHandBD-ML,train,montene,exact_clean,100.0,52
+D:\ediprjcursor\data\datasetHand\Training\training_words\2558.png,2558.png,Progut,Esomeprazole,datasetHand,training,,,,63
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\4.png,4.png,Aceta,Paracetamol,datasetHand,validation,,,,1
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\125.png,125.png,Baclon,Baclofen,datasetHand,testing,,,,12
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\323.png,323.png,Filmet,Metronidazole,datasetHand,validation,,,,32
+D:\ediprjcursor\data\datasetHand\Training\training_words\1593.png,1593.png,Ketoral,Ketoconazole (Tablet),datasetHand,training,,,,39
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\133.png,133.png,Bacmax,Baclofen,datasetHand,validation,,,,13
+D:\ediprjcursor\data\datasetHand\Training\training_words\2825.png,2825.png,Rozith,Azithromycin Dihydrate,datasetHand,training,,,,70
+D:\ediprjcursor\data\datasetHand\Training\training_words\2661.png,2661.png,Rhinil,Cetirizine Hydrochloride,datasetHand,training,,,,66
+D:\ediprjcursor\data\datasetHand\Training\training_words\2258.png,2258.png,Nexcap,Esomeprazole,datasetHand,training,,,,56
+D:\ediprjcursor\data\datasetHand\Training\training_words\136.png,136.png,Amodis,Metronidazole,datasetHand,training,,,,3
+D:\ediprjcursor\data\datasetHand\Training\training_words\187.png,187.png,Atrizin,Cetirizine Hydrochloride,datasetHand,training,,,,4
+D:\ediprjcursor\data\datasetHand\Training\training_words\1522.png,1522.png,Ketocon,Ketoconazole (Shampoo),datasetHand,training,,,,38
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\528.png,528.png,Montene,Montelukast Sodium,datasetHand,validation,,,,52
+D:\ediprjcursor\data\datasetHand\Training\training_words\1450.png,1450.png,Flexilax,Baclofen,datasetHand,training,,,,36
+D:\ediprjcursor\data\datasetHand\Training\training_words\853.png,853.png,Denixil,Clonazepam,datasetHand,training,,,,21
+D:\ediprjcursor\data\datasetHand\Training\training_words\24.png,24.png,Aceta,Paracetamol,datasetHand,training,,,,1
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\765.png,765.png,Vifas,Fexofenadine Hydrochloride,datasetHand,testing,,,,76
+D:\ediprjcursor\data\datasetHand\Training\training_words\973.png,973.png,Disopan,Clonazepam,datasetHand,training,,,,24
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P3199.jpg,P3199.jpg,Fexo,Fexofenadine Hydrochloride,RxHandBD-ML,train,Fexofenadine,prefix,100.0,30
+D:\ediprjcursor\data\datasetHand\Training\training_words\2164.png,2164.png,Napa Extend,Paracetamol,datasetHand,training,,,,55
+D:\ediprjcursor\data\datasetHand\Training\training_words\1152.png,1152.png,Exium,Esomeprazole,datasetHand,training,,,,28
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\62.png,62.png,Azithrocin,Azithromycin Dihydrate,datasetHand,testing,,,,7
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P2003.jpg,P2003.jpg,Nexum,Esomeprazole,RxHandBD-ML,train,Nexum mups 20,prefix,100.0,57
+D:\ediprjcursor\data\datasetHand\Training\training_words\1042.png,1042.png,Esoral,Esomeprazole,datasetHand,training,,,,26
+D:\ediprjcursor\data\datasetHand\Training\training_words\1919.png,1919.png,Maxpro,Esomeprazole,datasetHand,training,,,,47
+D:\ediprjcursor\data\datasetHand\Training\training_words\2217.png,2217.png,Napa,Paracetamol,datasetHand,training,,,,54
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\614.png,614.png,Omastin,Fluconazole,datasetHand,testing,,,,61
+D:\ediprjcursor\data\datasetHand\Training\training_words\586.png,586.png,Beklo,Baclofen,datasetHand,training,,,,14
+D:\ediprjcursor\data\datasetHand\Training\training_words\1051.png,1051.png,Esoral,Esomeprazole,datasetHand,training,,,,26
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\233.png,233.png,Dinafex,Fexofenadine Hydrochloride,datasetHand,validation,,,,23
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\563.png,563.png,Nexcap,Esomeprazole,datasetHand,validation,,,,56
+D:\ediprjcursor\data\datasetHand\Training\training_words\2344.png,2344.png,Nidazyl,Metronidazole,datasetHand,training,,,,58
+D:\ediprjcursor\data\datasetHand\Training\training_words\1804.png,1804.png,M-Kast,Montelukast Sodium,datasetHand,training,,,,45
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\368.png,368.png,Flexilax,Baclofen,datasetHand,validation,,,,36
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\520.png,520.png,Montene,Montelukast Sodium,datasetHand,validation,,,,52
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\537.png,537.png,Montex,Montelukast Sodium,datasetHand,testing,,,,53
+D:\ediprjcursor\data\datasetHand\Training\training_words\394.png,394.png,Bacaid,Baclofen,datasetHand,training,,,,9
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P3876.jpg,P3876.jpg,Napa Extend,Paracetamol,RxHandBD-ML,train,Napa,exact_clean,100.0,55
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\299.png,299.png,Fenadin,Fexofenadine Hydrochloride,datasetHand,validation,,,,29
+D:\ediprjcursor\data\datasetHand\Training\training_words\746.png,746.png,Cetisoft,Cetirizine Hydrochloride,datasetHand,training,,,,18
+D:\ediprjcursor\data\datasetHand\Training\training_words\2795.png,2795.png,Romycin,Azithromycin Dihydrate (Ophthalmic),datasetHand,training,,,,69
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\347.png,347.png,Flamyd,Metronidazole,datasetHand,validation,,,,34
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\465.png,465.png,Maxima,Esomeprazole,datasetHand,testing,,,,46
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P5337.jpg,P5337.jpg,Napa Extend,Paracetamol,RxHandBD-ML,train,napa,exact_clean,100.0,55
+D:\ediprjcursor\data\datasetHand\Training\training_words\757.png,757.png,Cetisoft,Cetirizine Hydrochloride,datasetHand,training,,,,18
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\133.png,133.png,Bacmax,Baclofen,datasetHand,testing,,,,13
+D:\ediprjcursor\data\datasetHand\Training\training_words\1766.png,1766.png,Lumona,Montelukast Sodium,datasetHand,training,,,,44
+D:\ediprjcursor\data\datasetHand\Training\training_words\2233.png,2233.png,Napa,Paracetamol,datasetHand,training,,,,54
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P3168.jpg,P3168.jpg,Metro,Metronidazole,RxHandBD-ML,train,Metro,exact_clean,100.0,48
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\58.png,58.png,Axodin,Fexofenadine Hydrochloride,datasetHand,testing,,,,5
+D:\ediprjcursor\data\datasetHand\Training\training_words\584.png,584.png,Beklo,Baclofen,datasetHand,training,,,,14
+D:\ediprjcursor\data\datasetHand\Training\training_words\1131.png,1131.png,Exium,Esomeprazole,datasetHand,training,,,,28
+D:\ediprjcursor\data\datasetHand\Training\training_words\2870.png,2870.png,Sergel,Esomeprazole,datasetHand,training,,,,71
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\502.png,502.png,Monas,Montelukast Sodium,datasetHand,testing,,,,50
+D:\ediprjcursor\data\datasetHand\Training\training_words\352.png,352.png,Az,Azithromycin Dihydrate,datasetHand,training,,,,6
+D:\ediprjcursor\data\datasetHand\Training\training_words\829.png,829.png,Dancel,Ketoconazole (Shampoo),datasetHand,training,,,,20
+D:\ediprjcursor\data\RxHandBD-ML\Test_Set\P0764.jpg,P0764.jpg,Napa Extend,Paracetamol,RxHandBD-ML,test,Napa,exact_clean,100.0,55
+D:\ediprjcursor\data\datasetHand\Training\training_words\2577.png,2577.png,Provair,Montelukast Sodium,datasetHand,training,,,,64
+D:\ediprjcursor\data\datasetHand\Training\training_words\122.png,122.png,Amodis,Metronidazole,datasetHand,training,,,,3
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\87.png,87.png,Az,Azithromycin Dihydrate,datasetHand,validation,,,,6
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P2280.jpg,P2280.jpg,Nexum,Esomeprazole,RxHandBD-ML,train,Nexum,exact_clean,100.0,57
+D:\ediprjcursor\data\datasetHand\Training\training_words\2902.png,2902.png,Tamen,Paracetamol,datasetHand,training,,,,72
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\514.png,514.png,Montair,Montelukast Sodium,datasetHand,validation,,,,51
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\590.png,590.png,Nizoder,Ketoconazole (Cream),datasetHand,validation,,,,59
+D:\ediprjcursor\data\datasetHand\Training\training_words\1254.png,1254.png,Fexo,Fexofenadine Hydrochloride,datasetHand,training,,,,30
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P2032.jpg,P2032.jpg,Denixil,Clonazepam,RxHandBD-ML,train,Devixil,difflib,85.71428571428571,21
+D:\ediprjcursor\data\datasetHand\Training\training_words\3011.png,3011.png,Trilock,Montelukast Sodium,datasetHand,training,,,,75
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\193.png,193.png,Conaz,Fluconazole,datasetHand,testing,,,,19
+D:\ediprjcursor\data\datasetHand\Training\training_words\1963.png,1963.png,Metsina,Metronidazole,datasetHand,training,,,,49
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\163.png,163.png,Canazole,Fluconazole,datasetHand,validation,,,,16
+D:\ediprjcursor\data\datasetHand\Training\training_words\1659.png,1659.png,Ketozol,Ketoconazole (Shampoo),datasetHand,training,,,,41
+D:\ediprjcursor\data\datasetHand\Training\training_words\3073.png,3073.png,Vifas,Fexofenadine Hydrochloride,datasetHand,training,,,,76
+D:\ediprjcursor\data\datasetHand\Training\training_words\2234.png,2234.png,Napa,Paracetamol,datasetHand,training,,,,54
+D:\ediprjcursor\data\datasetHand\Training\training_words\450.png,450.png,Baclofen,Baclofen,datasetHand,training,,,,11
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P1193.jpg,P1193.jpg,Monas,Montelukast Sodium,RxHandBD-ML,train,Monas,exact_clean,100.0,50
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\147.png,147.png,Beklo,Baclofen,datasetHand,testing,,,,14
+D:\ediprjcursor\data\datasetHand\Training\training_words\773.png,773.png,Conaz,Fluconazole,datasetHand,training,,,,19
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\714.png,714.png,Sergel,Esomeprazole,datasetHand,testing,,,,71
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\709.png,709.png,Rozith,Azithromycin Dihydrate,datasetHand,testing,,,,70
+D:\ediprjcursor\data\datasetHand\Training\training_words\1036.png,1036.png,Esonix,Esomeprazole,datasetHand,training,,,,25
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\676.png,676.png,Ritch,Fexofenadine Hydrochloride,datasetHand,testing,,,,67
+D:\ediprjcursor\data\datasetHand\Training\training_words\1325.png,1325.png,Fixal,Fexofenadine Hydrochloride,datasetHand,training,,,,33
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\224.png,224.png,Diflu,Fluconazole,datasetHand,validation,,,,22
+D:\ediprjcursor\data\datasetHand\Training\training_words\2515.png,2515.png,Opton,Esomeprazole,datasetHand,training,,,,62
+D:\ediprjcursor\data\datasetHand\Training\training_words\2118.png,2118.png,Montene,Montelukast Sodium,datasetHand,training,,,,52
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\280.png,280.png,Exium,Esomeprazole,datasetHand,testing,,,,28
+D:\ediprjcursor\data\datasetHand\Training\training_words\2824.png,2824.png,Rozith,Azithromycin Dihydrate,datasetHand,training,,,,70
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\630.png,630.png,Progut,Esomeprazole,datasetHand,validation,,,,63
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\581.png,581.png,Nidazyl,Metronidazole,datasetHand,validation,,,,58
+D:\ediprjcursor\data\datasetHand\Training\training_words\2178.png,2178.png,Napa Extend,Paracetamol,datasetHand,training,,,,55
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\32.png,32.png,Amodis,Metronidazole,datasetHand,testing,,,,3
+D:\ediprjcursor\data\datasetHand\Training\training_words\621.png,621.png,Bicozin,Vitamin B Complex + Zinc,datasetHand,training,,,,15
+D:\ediprjcursor\data\datasetHand\Training\training_words\28.png,28.png,Aceta,Paracetamol,datasetHand,training,,,,1
+D:\ediprjcursor\data\datasetHand\Training\training_words\2709.png,2709.png,Ritch,Fexofenadine Hydrochloride,datasetHand,training,,,,67
+D:\ediprjcursor\data\datasetHand\Training\training_words\1321.png,1321.png,Fixal,Fexofenadine Hydrochloride,datasetHand,training,,,,33
+D:\ediprjcursor\data\datasetHand\Training\training_words\248.png,248.png,Azithrocin,Azithromycin Dihydrate,datasetHand,training,,,,7
+D:\ediprjcursor\data\datasetHand\Training\training_words\311.png,311.png,Azyth,Azithromycin Dihydrate,datasetHand,training,,,,8
+D:\ediprjcursor\data\datasetHand\Training\training_words\1635.png,1635.png,Ketotab,Ketoconazole (Tablet),datasetHand,training,,,,40
+D:\ediprjcursor\data\datasetHand\Training\training_words\61.png,61.png,Ace,Paracetamol,datasetHand,training,,,,0
+D:\ediprjcursor\data\datasetHand\Training\training_words\1634.png,1634.png,Ketotab,Ketoconazole (Tablet),datasetHand,training,,,,40
+D:\ediprjcursor\data\datasetHand\Training\training_words\2664.png,2664.png,Rhinil,Cetirizine Hydrochloride,datasetHand,training,,,,66
+D:\ediprjcursor\data\datasetHand\Training\training_words\1631.png,1631.png,Ketotab,Ketoconazole (Tablet),datasetHand,training,,,,40
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\376.png,376.png,Flugal,Fluconazole,datasetHand,validation,,,,37
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\332.png,332.png,Fixal,Fexofenadine Hydrochloride,datasetHand,testing,,,,33
+D:\ediprjcursor\data\datasetHand\Training\training_words\1931.png,1931.png,Metro,Metronidazole,datasetHand,training,,,,48
+D:\ediprjcursor\data\datasetHand\Training\training_words\2444.png,2444.png,Omastin,Fluconazole,datasetHand,training,,,,61
+D:\ediprjcursor\data\datasetHand\Training\training_words\693.png,693.png,Candinil,Fluconazole,datasetHand,training,,,,17
+D:\ediprjcursor\data\datasetHand\Training\training_words\2032.png,2032.png,Monas,Montelukast Sodium,datasetHand,training,,,,50
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P3314.jpg,P3314.jpg,Napa Extend,Paracetamol,RxHandBD-ML,train,Napa,exact_clean,100.0,55
+D:\ediprjcursor\data\datasetHand\Training\training_words\1495.png,1495.png,Flugal,Fluconazole,datasetHand,training,,,,37
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P3242.jpg,P3242.jpg,Napa Extend,Paracetamol,RxHandBD-ML,train,Napa,exact_clean,100.0,55
+D:\ediprjcursor\data\datasetHand\Training\training_words\1949.png,1949.png,Metro,Metronidazole,datasetHand,training,,,,48
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\105.png,105.png,Backtone,Baclofen,datasetHand,validation,,,,10
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\747.png,747.png,Tridosil,Azithromycin Dihydrate,datasetHand,validation,,,,74
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\238.png,238.png,Dinafex,Fexofenadine Hydrochloride,datasetHand,validation,,,,23
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\119.png,119.png,Baclofen,Baclofen,datasetHand,testing,,,,11
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\97.png,97.png,Bacaid,Baclofen,datasetHand,validation,,,,9
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\409.png,409.png,Ketotab,Ketoconazole (Tablet),datasetHand,validation,,,,40
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\75.png,75.png,Azyth,Azithromycin Dihydrate,datasetHand,testing,,,,8
+D:\ediprjcursor\data\datasetHand\Training\training_words\1235.png,1235.png,Fexofast,Fexofenadine Hydrochloride,datasetHand,training,,,,31
+D:\ediprjcursor\data\datasetHand\Training\training_words\2628.png,2628.png,Renova,Paracetamol,datasetHand,training,,,,65
+D:\ediprjcursor\data\datasetHand\Training\training_words\1400.png,1400.png,Flexibac,Baclofen,datasetHand,training,,,,35
+D:\ediprjcursor\data\datasetHand\Training\training_words\2061.png,2061.png,Montair,Montelukast Sodium,datasetHand,training,,,,51
+D:\ediprjcursor\data\datasetHand\Training\training_words\417.png,417.png,Backtone,Baclofen,datasetHand,training,,,,10
+D:\ediprjcursor\data\datasetHand\Training\training_words\15.png,15.png,Aceta,Paracetamol,datasetHand,training,,,,1
+D:\ediprjcursor\data\datasetHand\Training\training_words\2578.png,2578.png,Provair,Montelukast Sodium,datasetHand,training,,,,64
+D:\ediprjcursor\data\datasetHand\Training\training_words\2827.png,2827.png,Rozith,Azithromycin Dihydrate,datasetHand,training,,,,70
+D:\ediprjcursor\data\datasetHand\Training\training_words\1982.png,1982.png,Metsina,Metronidazole,datasetHand,training,,,,49
+D:\ediprjcursor\data\datasetHand\Training\training_words\1872.png,1872.png,Maxima,Esomeprazole,datasetHand,training,,,,46
+D:\ediprjcursor\data\datasetHand\Training\training_words\1220.png,1220.png,Fexofast,Fexofenadine Hydrochloride,datasetHand,training,,,,31
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P3459.jpg,P3459.jpg,Napa Extend,Paracetamol,RxHandBD-ML,train,Napa,exact_clean,100.0,55
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\626.png,626.png,Opton,Esomeprazole,datasetHand,validation,,,,62
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\97.png,97.png,Bacaid,Baclofen,datasetHand,testing,,,,9
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\650.png,650.png,Renova,Paracetamol,datasetHand,validation,,,,65
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\293.png,293.png,Fenadin,Fexofenadine Hydrochloride,datasetHand,validation,,,,29
+D:\ediprjcursor\data\datasetHand\Training\training_words\889.png,889.png,Diflu,Fluconazole,datasetHand,training,,,,22
+D:\ediprjcursor\data\datasetHand\Training\training_words\2088.png,2088.png,Montene,Montelukast Sodium,datasetHand,training,,,,52
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P5275.jpg,P5275.jpg,Rivotril,Clonazepam,RxHandBD-ML,train,Rivotril,exact_clean,100.0,68
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\479.png,479.png,Maxpro,Esomeprazole,datasetHand,testing,,,,47
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P2941.jpg,P2941.jpg,Nexum,Esomeprazole,RxHandBD-ML,train,Nexum,exact_clean,100.0,57
+D:\ediprjcursor\data\datasetHand\Training\training_words\471.png,471.png,Baclofen,Baclofen,datasetHand,training,,,,11
+D:\ediprjcursor\data\datasetHand\Training\training_words\2567.png,2567.png,Provair,Montelukast Sodium,datasetHand,training,,,,64
+D:\ediprjcursor\data\datasetHand\Training\training_words\1272.png,1272.png,Fexo,Fexofenadine Hydrochloride,datasetHand,training,,,,30
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\636.png,636.png,Progut,Esomeprazole,datasetHand,testing,,,,63
+D:\ediprjcursor\data\datasetHand\Training\training_words\983.png,983.png,Disopan,Clonazepam,datasetHand,training,,,,24
+D:\ediprjcursor\data\datasetHand\Training\training_words\1812.png,1812.png,M-Kast,Montelukast Sodium,datasetHand,training,,,,45
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\697.png,697.png,Romycin,Azithromycin Dihydrate (Ophthalmic),datasetHand,testing,,,,69
+D:\ediprjcursor\data\datasetHand\Training\training_words\929.png,929.png,Dinafex,Fexofenadine Hydrochloride,datasetHand,training,,,,23
+D:\ediprjcursor\data\datasetHand\Training\training_words\2018.png,2018.png,Monas,Montelukast Sodium,datasetHand,training,,,,50
+D:\ediprjcursor\data\datasetHand\Training\training_words\1003.png,1003.png,Esonix,Esomeprazole,datasetHand,training,,,,25
+D:\ediprjcursor\data\datasetHand\Training\training_words\2984.png,2984.png,Tridosil,Azithromycin Dihydrate,datasetHand,training,,,,74
+D:\ediprjcursor\data\datasetHand\Training\training_words\907.png,907.png,Diflu,Fluconazole,datasetHand,training,,,,22
+D:\ediprjcursor\data\datasetHand\Training\training_words\2501.png,2501.png,Opton,Esomeprazole,datasetHand,training,,,,62
+D:\ediprjcursor\data\datasetHand\Training\training_words\51.png,51.png,Ace,Paracetamol,datasetHand,training,,,,0
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P2188.jpg,P2188.jpg,Exium,Esomeprazole,RxHandBD-ML,train,Exium Mups,prefix,100.0,28
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\102.png,102.png,Backtone,Baclofen,datasetHand,validation,,,,10
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\570.png,570.png,Nexum,Esomeprazole,datasetHand,validation,,,,57
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\520.png,520.png,Montene,Montelukast Sodium,datasetHand,testing,,,,52
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P4135.jpg,P4135.jpg,Napa Extend,Paracetamol,RxHandBD-ML,train,Napa,exact_clean,100.0,55
+D:\ediprjcursor\data\datasetHand\Training\training_words\2961.png,2961.png,Tridosil,Azithromycin Dihydrate,datasetHand,training,,,,74
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\718.png,718.png,Sergel,Esomeprazole,datasetHand,testing,,,,71
+D:\ediprjcursor\data\datasetHand\Training\training_words\1663.png,1663.png,Ketozol,Ketoconazole (Shampoo),datasetHand,training,,,,41
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P3364.jpg,P3364.jpg,Napa Extend,Paracetamol,RxHandBD-ML,train,Napa,exact_clean,100.0,55
+D:\ediprjcursor\data\datasetHand\Training\training_words\1491.png,1491.png,Flugal,Fluconazole,datasetHand,training,,,,37
+D:\ediprjcursor\data\datasetHand\Training\training_words\2970.png,2970.png,Tridosil,Azithromycin Dihydrate,datasetHand,training,,,,74
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\640.png,640.png,Provair,Montelukast Sodium,datasetHand,testing,,,,64
+D:\ediprjcursor\data\datasetHand\Training\training_words\1696.png,1696.png,Leptic,Clonazepam,datasetHand,training,,,,42
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\292.png,292.png,Fenadin,Fexofenadine Hydrochloride,datasetHand,testing,,,,29
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\363.png,363.png,Flexilax,Baclofen,datasetHand,testing,,,,36
+D:\ediprjcursor\data\datasetHand\Training\training_words\1510.png,1510.png,Flugal,Fluconazole,datasetHand,training,,,,37
+D:\ediprjcursor\data\datasetHand\Training\training_words\1965.png,1965.png,Metsina,Metronidazole,datasetHand,training,,,,49
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P1504.jpg,P1504.jpg,Renova,Paracetamol,RxHandBD-ML,train,Renova XR,exact_clean,100.0,65
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\49.png,49.png,Atrizin,Cetirizine Hydrochloride,datasetHand,validation,,,,4
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\470.png,470.png,Maxpro,Esomeprazole,datasetHand,testing,,,,47
+D:\ediprjcursor\data\RxHandBD-ML\Test_Set\P0157.jpg,P0157.jpg,Trilock,Montelukast Sodium,RxHandBD-ML,test,Trilock 10,exact_clean,100.0,75
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P3437.jpg,P3437.jpg,Napa Extend,Paracetamol,RxHandBD-ML,train,Napa,exact_clean,100.0,55
+D:\ediprjcursor\data\datasetHand\Training\training_words\2897.png,2897.png,Tamen,Paracetamol,datasetHand,training,,,,72
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P3961.jpg,P3961.jpg,Bicozin,Vitamin B Complex + Zinc,RxHandBD-ML,train,Bicozin,exact_clean,100.0,15
+D:\ediprjcursor\data\datasetHand\Training\training_words\2402.png,2402.png,Odmon,Montelukast Sodium,datasetHand,training,,,,60
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\426.png,426.png,Leptic,Clonazepam,datasetHand,testing,,,,42
+D:\ediprjcursor\data\datasetHand\Training\training_words\905.png,905.png,Diflu,Fluconazole,datasetHand,training,,,,22
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\419.png,419.png,Ketozol,Ketoconazole (Shampoo),datasetHand,testing,,,,41
+D:\ediprjcursor\data\datasetHand\Training\training_words\1528.png,1528.png,Ketocon,Ketoconazole (Shampoo),datasetHand,training,,,,38
+D:\ediprjcursor\data\datasetHand\Training\training_words\1526.png,1526.png,Ketocon,Ketoconazole (Shampoo),datasetHand,training,,,,38
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\603.png,603.png,Odmon,Montelukast Sodium,datasetHand,validation,,,,60
+D:\ediprjcursor\data\datasetHand\Training\training_words\207.png,207.png,Axodin,Fexofenadine Hydrochloride,datasetHand,training,,,,5
+D:\ediprjcursor\data\datasetHand\Training\training_words\1109.png,1109.png,Etizin,Cetirizine Hydrochloride,datasetHand,training,,,,27
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\353.png,353.png,Flexibac,Baclofen,datasetHand,testing,,,,35
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P4981.jpg,P4981.jpg,Metro,Metronidazole,RxHandBD-ML,train,metro,exact_clean,100.0,48
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\667.png,667.png,Rhinil,Cetirizine Hydrochloride,datasetHand,validation,,,,66
+D:\ediprjcursor\data\datasetHand\Training\training_words\2248.png,2248.png,Nexcap,Esomeprazole,datasetHand,training,,,,56
+D:\ediprjcursor\data\datasetHand\Training\training_words\701.png,701.png,Candinil,Fluconazole,datasetHand,training,,,,17
+D:\ediprjcursor\data\datasetHand\Training\training_words\2507.png,2507.png,Opton,Esomeprazole,datasetHand,training,,,,62
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\729.png,729.png,Tamen,Paracetamol,datasetHand,validation,,,,72
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\20.png,20.png,Alatrol,Cetirizine Hydrochloride,datasetHand,testing,,,,2
+D:\ediprjcursor\data\datasetHand\Training\training_words\1014.png,1014.png,Esonix,Esomeprazole,datasetHand,training,,,,25
+D:\ediprjcursor\data\datasetHand\Training\training_words\1307.png,1307.png,Filmet,Metronidazole,datasetHand,training,,,,32
+D:\ediprjcursor\data\RxHandBD-ML\Test_Set\P0810.jpg,P0810.jpg,Nexum,Esomeprazole,RxHandBD-ML,test,Nexum,exact_clean,100.0,57
+D:\ediprjcursor\data\datasetHand\Training\training_words\2363.png,2363.png,Nizoder,Ketoconazole (Cream),datasetHand,training,,,,59
+D:\ediprjcursor\data\datasetHand\Training\training_words\2769.png,2769.png,Romycin,Azithromycin Dihydrate (Ophthalmic),datasetHand,training,,,,69
+D:\ediprjcursor\data\datasetHand\Training\training_words\2135.png,2135.png,Montex,Montelukast Sodium,datasetHand,training,,,,53
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\19.png,19.png,Ace,Paracetamol,datasetHand,testing,,,,0
+D:\ediprjcursor\data\datasetHand\Training\training_words\2952.png,2952.png,Telfast,Fexofenadine Hydrochloride,datasetHand,training,,,,73
+D:\ediprjcursor\data\RxHandBD-ML\Train_Set\P3665.jpg,P3665.jpg,Napa Extend,Paracetamol,RxHandBD-ML,train,Napa,exact_clean,100.0,55
+D:\ediprjcursor\data\datasetHand\Training\training_words\111.png,111.png,Alatrol,Cetirizine Hydrochloride,datasetHand,training,,,,2
+D:\ediprjcursor\data\datasetHand\Training\training_words\359.png,359.png,Az,Azithromycin Dihydrate,datasetHand,training,,,,6
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\545.png,545.png,Napa Extend,Paracetamol,datasetHand,validation,,,,55
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\696.png,696.png,Romycin,Azithromycin Dihydrate (Ophthalmic),datasetHand,validation,,,,69
+D:\ediprjcursor\data\datasetHand\Training\training_words\1162.png,1162.png,Fenadin,Fexofenadine Hydrochloride,datasetHand,training,,,,29
+D:\ediprjcursor\data\datasetHand\Training\training_words\2828.png,2828.png,Rozith,Azithromycin Dihydrate,datasetHand,training,,,,70
+D:\ediprjcursor\data\datasetHand\Training\training_words\2517.png,2517.png,Opton,Esomeprazole,datasetHand,training,,,,62
+D:\ediprjcursor\data\datasetHand\Training\training_words\1115.png,1115.png,Etizin,Cetirizine Hydrochloride,datasetHand,training,,,,27
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\215.png,215.png,Denixil,Clonazepam,datasetHand,validation,,,,21
+D:\ediprjcursor\data\datasetHand\Training\training_words\619.png,619.png,Bicozin,Vitamin B Complex + Zinc,datasetHand,training,,,,15
+D:\ediprjcursor\data\datasetHand\Training\training_words\1166.png,1166.png,Fenadin,Fexofenadine Hydrochloride,datasetHand,training,,,,29
+D:\ediprjcursor\data\datasetHand\Validation\validation_words\244.png,244.png,Disopan,Clonazepam,datasetHand,validation,,,,24
+D:\ediprjcursor\data\datasetHand\Training\training_words\1038.png,1038.png,Esonix,Esomeprazole,datasetHand,training,,,,25
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\424.png,424.png,Leptic,Clonazepam,datasetHand,testing,,,,42
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\727.png,727.png,Tamen,Paracetamol,datasetHand,testing,,,,72
+D:\ediprjcursor\data\datasetHand\Testing\testing_words\657.png,657.png,Renova,Paracetamol,datasetHand,testing,,,,65
+D:\ediprjcursor\data\datasetHand\Training\training_words\2326.png,2326.png,Nidazyl,Metronidazole,datasetHand,training,,,,58
+D:\ediprjcursor\data\RxHandBD-ML\Test_Set\P0748.jpg,P0748.jpg,Napa Extend,Paracetamol,RxHandBD-ML,test,Napa,exact_clean,100.0,55
+D:\ediprjcursor\data\RxHandBD-ML\Test_Set\P0588.jpg,P0588.jpg,Flamyd,Metronidazole,RxHandBD-ML,test,Flamyd,exact_clean,100.0,34

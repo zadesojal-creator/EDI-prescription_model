@@ -1,0 +1,4 @@
+Experiment,Test Accuracy,Macro-F1,Weighted-F1
+Reference Baseline (prior run),0.5983,N/A,N/A
+MobileNetV2-Frozen-Letterbox,0.5144,0.4911,0.4986
+MobileNetV2-FineTuned-Letterbox,0.4454,0.4083,0.4148

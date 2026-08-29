@@ -1,0 +1,1586 @@
+[
+  {
+    "review_id": "rev_dfc13c15f2",
+    "prediction_id": "pred_8cb174bc0a",
+    "prescription_id": "rx_3930ec49",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_4e8d207536.jpg",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "dr_evans",
+    "doctor_email": "dr.evans@hospital.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-17T10:20:29.586649+00:00",
+    "reviewed_at": "2026-08-17T10:20:29.609267+00:00"
+  },
+  {
+    "review_id": "rev_4cf10704b2",
+    "prediction_id": "pred_2a08e70fc3",
+    "prescription_id": "rx_5121f2d7",
+    "image_reference": "D:\\ediprjcursor\\data\\datasetHand\\Training\\training_words\\1032.png",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "doc_default",
+    "doctor_email": "doctor@clinic.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-17T10:21:32.512060+00:00",
+    "reviewed_at": "2026-08-17T10:21:32.516046+00:00"
+  },
+  {
+    "review_id": "rev_1c8a8e9d49",
+    "prediction_id": "pred_50a3967a60",
+    "prescription_id": "rx_d6cc9d72",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_7e85a72154.png",
+    "original_prediction": "Aceta",
+    "original_confidence": 0.9996500015258789,
+    "top_3_predictions": [
+      {
+        "brand_name": "Aceta",
+        "confidence": 0.9996500015258789,
+        "generic_name": "Paracetamol"
+      },
+      {
+        "brand_name": "Amodis",
+        "confidence": 0.00012557207082863897,
+        "generic_name": "Metronidazole"
+      },
+      {
+        "brand_name": "Ritch",
+        "confidence": 9.495142876403406e-05,
+        "generic_name": "Fexofenadine Hydrochloride"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "PENDING",
+    "doctor_verified_label": null,
+    "known_class": null,
+    "feedback_type": null,
+    "doctor_id": null,
+    "doctor_email": null,
+    "model_version": "v1.0",
+    "created_at": "2026-08-20T10:30:12.514925+00:00",
+    "reviewed_at": null
+  },
+  {
+    "review_id": "rev_e1ad45fc9f",
+    "prediction_id": "pred_b5feb1970b",
+    "prescription_id": "rx_7a2ddb84",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_0f75ba33de.png",
+    "original_prediction": "Aceta",
+    "original_confidence": 0.9996500015258789,
+    "top_3_predictions": [
+      {
+        "brand_name": "Aceta",
+        "confidence": 0.9996500015258789,
+        "generic_name": "Paracetamol"
+      },
+      {
+        "brand_name": "Amodis",
+        "confidence": 0.00012557207082863897,
+        "generic_name": "Metronidazole"
+      },
+      {
+        "brand_name": "Ritch",
+        "confidence": 9.495142876403406e-05,
+        "generic_name": "Fexofenadine Hydrochloride"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "PENDING",
+    "doctor_verified_label": null,
+    "known_class": null,
+    "feedback_type": null,
+    "doctor_id": null,
+    "doctor_email": null,
+    "model_version": "v1.0",
+    "created_at": "2026-08-20T10:30:39.753406+00:00",
+    "reviewed_at": null
+  },
+  {
+    "review_id": "rev_139dd7b1f3",
+    "prediction_id": "pred_06de7ead7e",
+    "prescription_id": "rx_e2345373",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_cf2532460c.jpg",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "dr_evans",
+    "doctor_email": "dr.evans@hospital.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-20T11:02:56.450940+00:00",
+    "reviewed_at": "2026-08-20T11:02:56.501308+00:00"
+  },
+  {
+    "review_id": "rev_936ba829f9",
+    "prediction_id": "pred_0b40ae7a83",
+    "prescription_id": "rx_e658bdc1",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_16cf8f8e5e.jpg",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806762732798234e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "PENDING",
+    "doctor_verified_label": null,
+    "known_class": null,
+    "feedback_type": null,
+    "doctor_id": null,
+    "doctor_email": null,
+    "model_version": "v1.0",
+    "created_at": "2026-08-20T11:03:45.439147+00:00",
+    "reviewed_at": null
+  },
+  {
+    "review_id": "rev_d793d36079",
+    "prediction_id": "pred_13a21f1f91",
+    "prescription_id": "rx_99658c5c",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_43f2c9b181.jpg",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806762732798234e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "PENDING",
+    "doctor_verified_label": null,
+    "known_class": null,
+    "feedback_type": null,
+    "doctor_id": null,
+    "doctor_email": null,
+    "model_version": "v1.0",
+    "created_at": "2026-08-20T11:04:02.344983+00:00",
+    "reviewed_at": null
+  },
+  {
+    "review_id": "rev_62a90ce6c2",
+    "prediction_id": "pred_ae2e06b537",
+    "prescription_id": "rx_302899c1",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_4f24035022.png",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806762732798234e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "PENDING",
+    "doctor_verified_label": null,
+    "known_class": null,
+    "feedback_type": null,
+    "doctor_id": null,
+    "doctor_email": null,
+    "model_version": "v1.0",
+    "created_at": "2026-08-20T11:06:34.523309+00:00",
+    "reviewed_at": null
+  },
+  {
+    "review_id": "rev_04079b6369",
+    "prediction_id": "pred_372f5d63ae",
+    "prescription_id": "rx_e418282e",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_ef48c74d03.jpg",
+    "original_prediction": "Napa Extend",
+    "original_confidence": 0.8050681352615356,
+    "top_3_predictions": [
+      {
+        "brand_name": "Napa Extend",
+        "confidence": 0.8050681352615356,
+        "generic_name": "Paracetamol"
+      },
+      {
+        "brand_name": "Sergel",
+        "confidence": 0.16908715665340424,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Napa",
+        "confidence": 0.013125872239470482,
+        "generic_name": "Paracetamol"
+      }
+    ],
+    "priority": "MEDIUM",
+    "prediction_status": "medium_confidence",
+    "status": "PENDING",
+    "doctor_verified_label": null,
+    "known_class": null,
+    "feedback_type": null,
+    "doctor_id": null,
+    "doctor_email": null,
+    "model_version": "v1.0",
+    "created_at": "2026-08-20T11:06:34.667600+00:00",
+    "reviewed_at": null
+  },
+  {
+    "review_id": "rev_9d555b1afb",
+    "prediction_id": "pred_4135a7ca4d",
+    "prescription_id": "rx_8bd41617",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_ea7bbb0bb3.png",
+    "original_prediction": "Unknown",
+    "original_confidence": 0.33437085151672363,
+    "top_3_predictions": [
+      {
+        "brand_name": "Baclon",
+        "confidence": 0.33437085151672363,
+        "generic_name": "Baclofen"
+      },
+      {
+        "brand_name": "Baclofen",
+        "confidence": 0.27117493748664856,
+        "generic_name": "Baclofen"
+      },
+      {
+        "brand_name": "Bicozin",
+        "confidence": 0.07107964903116226,
+        "generic_name": "Vitamin B Complex + Zinc"
+      }
+    ],
+    "priority": "HIGH",
+    "prediction_status": "doctor_verification_required",
+    "status": "PENDING",
+    "doctor_verified_label": null,
+    "known_class": null,
+    "feedback_type": null,
+    "doctor_id": null,
+    "doctor_email": null,
+    "model_version": "v1.0",
+    "created_at": "2026-08-20T11:06:34.804775+00:00",
+    "reviewed_at": null
+  },
+  {
+    "review_id": "rev_6fefcc1aa6",
+    "prediction_id": "pred_dc143d2f0d",
+    "prescription_id": "rx_67f7823c",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_81fbfc52fb.jpg",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "dr_smith",
+    "doctor_email": "dr.smith@hospital.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-20T11:40:49.806981+00:00",
+    "reviewed_at": "2026-08-20T11:40:49.830887+00:00"
+  },
+  {
+    "review_id": "rev_16daeb52d0",
+    "prediction_id": "pred_4e08e3690e",
+    "prescription_id": "rx_0c8eef84",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_7d3b6ed2db.jpg",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "dr_evans",
+    "doctor_email": "dr.evans@hospital.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-20T11:50:52.981777+00:00",
+    "reviewed_at": "2026-08-20T11:50:53.028940+00:00"
+  },
+  {
+    "review_id": "rev_da0d72474c",
+    "prediction_id": "pred_65c674f9c0",
+    "prescription_id": "rx_6087f083",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_8591675949.jpg",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "PENDING",
+    "doctor_verified_label": null,
+    "known_class": null,
+    "feedback_type": null,
+    "doctor_id": null,
+    "doctor_email": null,
+    "model_version": "v1.0",
+    "created_at": "2026-08-20T11:50:53.188286+00:00",
+    "reviewed_at": null
+  },
+  {
+    "review_id": "rev_a237d4947d",
+    "prediction_id": "pred_def8327e2a",
+    "prescription_id": "rx_5a9d1083",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_28dc8e93ed.jpg",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806762732798234e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "PENDING",
+    "doctor_verified_label": null,
+    "known_class": null,
+    "feedback_type": null,
+    "doctor_id": null,
+    "doctor_email": null,
+    "model_version": "v1.0",
+    "created_at": "2026-08-20T12:40:45.426964+00:00",
+    "reviewed_at": null
+  },
+  {
+    "review_id": "rev_2cc6aa8eba",
+    "prediction_id": "pred_de43e6840d",
+    "prescription_id": "rx_bc33fba6",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_52b7cfba3b.jpg",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "dr_evans",
+    "doctor_email": "dr.evans@hospital.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-20T12:45:23.183138+00:00",
+    "reviewed_at": "2026-08-20T12:45:23.216943+00:00"
+  },
+  {
+    "review_id": "rev_1a1712d32d",
+    "prediction_id": "pred_3125744ab7",
+    "prescription_id": "rx_fb6bdd8d",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_4a15ecffe9.jpg",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "dr_smith",
+    "doctor_email": "dr.smith@hospital.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-20T12:45:23.381963+00:00",
+    "reviewed_at": "2026-08-20T12:45:23.399305+00:00"
+  },
+  {
+    "review_id": "rev_d59734dc70",
+    "prediction_id": "pred_8b59cb6c80",
+    "prescription_id": "rx_d7e33fe7",
+    "image_reference": "D:\\ediprjcursor\\data\\datasetHand\\Training\\training_words\\1032.png",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "doc_default",
+    "doctor_email": "doctor@clinic.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-20T13:02:30.018369+00:00",
+    "reviewed_at": "2026-08-20T13:02:30.026888+00:00"
+  },
+  {
+    "review_id": "rev_628a7578ef",
+    "prediction_id": "pred_e3ba152df4",
+    "prescription_id": "rx_819fa851",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_2543f19a05.jpeg",
+    "original_prediction": "Unknown",
+    "original_confidence": 0.4435514509677887,
+    "top_3_predictions": [
+      {
+        "brand_name": "Monas",
+        "confidence": 0.4435514509677887,
+        "generic_name": "Montelukast Sodium"
+      },
+      {
+        "brand_name": "Vifas",
+        "confidence": 0.2012050598859787,
+        "generic_name": "Fexofenadine Hydrochloride"
+      },
+      {
+        "brand_name": "Napa Extend",
+        "confidence": 0.1705915778875351,
+        "generic_name": "Paracetamol"
+      }
+    ],
+    "priority": "HIGH",
+    "prediction_status": "doctor_verification_required",
+    "status": "PENDING",
+    "doctor_verified_label": null,
+    "known_class": null,
+    "feedback_type": null,
+    "doctor_id": null,
+    "doctor_email": null,
+    "model_version": "v1.0",
+    "created_at": "2026-08-20T13:18:30.260882+00:00",
+    "reviewed_at": null
+  },
+  {
+    "review_id": "rev_930ad7bd6b",
+    "prediction_id": "pred_3293c6597a",
+    "prescription_id": "rx_6f028595",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_8e6ecd74ae.jpg",
+    "original_prediction": "Rivotril",
+    "original_confidence": 0.9682231545448303,
+    "top_3_predictions": [
+      {
+        "brand_name": "Rivotril",
+        "confidence": 0.9682231545448303,
+        "generic_name": "Clonazepam"
+      },
+      {
+        "brand_name": "Rhinil",
+        "confidence": 0.008928991854190826,
+        "generic_name": "Cetirizine Hydrochloride"
+      },
+      {
+        "brand_name": "Napa Extend",
+        "confidence": 0.0043341233395040035,
+        "generic_name": "Paracetamol"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "PENDING",
+    "doctor_verified_label": null,
+    "known_class": null,
+    "feedback_type": null,
+    "doctor_id": null,
+    "doctor_email": null,
+    "model_version": "v1.0",
+    "created_at": "2026-08-20T14:19:39.390671+00:00",
+    "reviewed_at": null
+  },
+  {
+    "review_id": "rev_9b90158993",
+    "prediction_id": "pred_43facdfd06",
+    "prescription_id": "rx_96be0c50",
+    "image_reference": "D:\\ediprjcursor\\data\\datasetHand\\Training\\training_words\\1032.png",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "doc_default",
+    "doctor_email": "doctor@clinic.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-23T17:11:35.520317+00:00",
+    "reviewed_at": "2026-08-23T17:11:35.526816+00:00"
+  },
+  {
+    "review_id": "rev_80b00f3356",
+    "prediction_id": "pred_78aa3a8650",
+    "prescription_id": "rx_45f3e452",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_501ddf1af2.jpg",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "dr_evans",
+    "doctor_email": "dr.evans@hospital.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-23T17:11:38.060508+00:00",
+    "reviewed_at": "2026-08-23T17:11:39.332906+00:00"
+  },
+  {
+    "review_id": "rev_915523b196",
+    "prediction_id": "pred_d50a646d6f",
+    "prescription_id": "rx_8a6b144c",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_aab95b228c.jpg",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "dr_smith",
+    "doctor_email": "dr.smith@hospital.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-23T17:11:39.509442+00:00",
+    "reviewed_at": "2026-08-23T17:11:40.522107+00:00"
+  },
+  {
+    "review_id": "rev_15b70dcf71",
+    "prediction_id": "pred_646a662505",
+    "prescription_id": "rx_7a1109c6",
+    "image_reference": "D:\\ediprjcursor\\data\\datasetHand\\Training\\training_words\\1032.png",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "doc_default",
+    "doctor_email": "doctor@clinic.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-23T17:12:11.913691+00:00",
+    "reviewed_at": "2026-08-23T17:12:11.921630+00:00"
+  },
+  {
+    "review_id": "rev_c3f5793ada",
+    "prediction_id": "pred_47ea4cc83e",
+    "prescription_id": "rx_efbb2692",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_ff0bc4a76f.jpg",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "dr_evans",
+    "doctor_email": "dr.evans@hospital.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-23T17:12:14.281676+00:00",
+    "reviewed_at": "2026-08-23T17:12:18.202586+00:00"
+  },
+  {
+    "review_id": "rev_19be98402e",
+    "prediction_id": "pred_522bc18840",
+    "prescription_id": "rx_036ddba0",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_5275240f78.jpg",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "dr_smith",
+    "doctor_email": "dr.smith@hospital.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-23T17:12:18.373238+00:00",
+    "reviewed_at": "2026-08-23T17:12:20.107508+00:00"
+  },
+  {
+    "review_id": "rev_210f7b6b85",
+    "prediction_id": "pred_db3ca412aa",
+    "prescription_id": "rx_64add1e3",
+    "image_reference": "D:\\ediprjcursor\\data\\datasetHand\\Training\\training_words\\1032.png",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "doc_default",
+    "doctor_email": "doctor@clinic.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-23T17:13:07.373438+00:00",
+    "reviewed_at": "2026-08-23T17:13:07.381164+00:00"
+  },
+  {
+    "review_id": "rev_639cb548f2",
+    "prediction_id": "pred_065fbc7cba",
+    "prescription_id": "rx_5b23f42c",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_1d90663702.jpg",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "dr_evans",
+    "doctor_email": "dr.evans@hospital.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-23T17:13:09.829594+00:00",
+    "reviewed_at": "2026-08-23T17:13:11.693542+00:00"
+  },
+  {
+    "review_id": "rev_a9203d7ea9",
+    "prediction_id": "pred_26e214854e",
+    "prescription_id": "rx_c4a49744",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_5e6134e388.jpg",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "dr_smith",
+    "doctor_email": "dr.smith@hospital.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-23T17:13:11.875719+00:00",
+    "reviewed_at": "2026-08-23T17:13:13.535956+00:00"
+  },
+  {
+    "review_id": "rev_40e87fed36",
+    "prediction_id": "pred_67fac24f50",
+    "prescription_id": "rx_5154ae94",
+    "image_reference": "D:\\ediprjcursor\\data\\datasetHand\\Training\\training_words\\1032.png",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "doc_default",
+    "doctor_email": "doctor@clinic.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-23T17:21:10.494860+00:00",
+    "reviewed_at": "2026-08-23T17:21:10.502552+00:00"
+  },
+  {
+    "review_id": "rev_8f0b0df8ce",
+    "prediction_id": "pred_30f0f3ff6d",
+    "prescription_id": "rx_a82419e3",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_572ce5fbfb.jpg",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "dr_evans",
+    "doctor_email": "dr.evans@hospital.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-23T17:21:12.878559+00:00",
+    "reviewed_at": "2026-08-23T17:21:15.101994+00:00"
+  },
+  {
+    "review_id": "rev_5ee6638fda",
+    "prediction_id": "pred_33f5ecca26",
+    "prescription_id": "rx_58ca38b8",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_01e7793a71.jpg",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "dr_smith",
+    "doctor_email": "dr.smith@hospital.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-23T17:21:15.285086+00:00",
+    "reviewed_at": "2026-08-23T17:21:19.959075+00:00"
+  },
+  {
+    "review_id": "rev_e0b364c3c7",
+    "prediction_id": "pred_25e726d318",
+    "prescription_id": "rx_0f8922b8",
+    "image_reference": "D:\\ediprjcursor\\data\\datasetHand\\Training\\training_words\\1032.png",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "doc_default",
+    "doctor_email": "doctor@clinic.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-23T17:54:41.693275+00:00",
+    "reviewed_at": "2026-08-23T17:54:41.711994+00:00"
+  },
+  {
+    "review_id": "rev_7647aa6f5b",
+    "prediction_id": "pred_78b1ad90cd",
+    "prescription_id": "rx_08084f98",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_4045ae4724.jpg",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "dr_evans",
+    "doctor_email": "dr.evans@hospital.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-23T17:54:47.552963+00:00",
+    "reviewed_at": "2026-08-23T17:54:50.892303+00:00"
+  },
+  {
+    "review_id": "rev_d96ceadf27",
+    "prediction_id": "pred_113b57c282",
+    "prescription_id": "rx_35bb88d9",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_b43a491923.jpg",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "dr_smith",
+    "doctor_email": "dr.smith@hospital.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-23T17:54:51.264861+00:00",
+    "reviewed_at": "2026-08-23T17:54:54.005027+00:00"
+  },
+  {
+    "review_id": "rev_0c50f90957",
+    "prediction_id": "pred_2a90ed4ad7",
+    "prescription_id": "rx_2f161280",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_21d5110870.png",
+    "original_prediction": "Unknown",
+    "original_confidence": 0.5314108729362488,
+    "top_3_predictions": [
+      {
+        "brand_name": "Lumona",
+        "confidence": 0.5314108729362488,
+        "generic_name": "Montelukast Sodium"
+      },
+      {
+        "brand_name": "Vifas",
+        "confidence": 0.19319656491279602,
+        "generic_name": "Fexofenadine Hydrochloride"
+      },
+      {
+        "brand_name": "Napa Extend",
+        "confidence": 0.1068020835518837,
+        "generic_name": "Paracetamol"
+      }
+    ],
+    "priority": "HIGH",
+    "prediction_status": "doctor_verification_required",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Unknown",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "doc_web_portal",
+    "doctor_email": "zadesojal@gmail.com",
+    "model_version": "v1.0",
+    "created_at": "2026-08-23T18:05:09.038964+00:00",
+    "reviewed_at": "2026-08-23T18:06:30.918878+00:00"
+  },
+  {
+    "review_id": "rev_ecf37e6ca9",
+    "prediction_id": "pred_e2bf1e90b7",
+    "prescription_id": "rx_81088bcc",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_8065e17909.png",
+    "original_prediction": "Unknown",
+    "original_confidence": 0.5314108729362488,
+    "top_3_predictions": [
+      {
+        "brand_name": "Lumona",
+        "confidence": 0.5314108729362488,
+        "generic_name": "Montelukast Sodium"
+      },
+      {
+        "brand_name": "Vifas",
+        "confidence": 0.19319656491279602,
+        "generic_name": "Fexofenadine Hydrochloride"
+      },
+      {
+        "brand_name": "Napa Extend",
+        "confidence": 0.1068020835518837,
+        "generic_name": "Paracetamol"
+      }
+    ],
+    "priority": "HIGH",
+    "prediction_status": "doctor_verification_required",
+    "status": "CORRECTED",
+    "doctor_verified_label": "Lumona",
+    "known_class": true,
+    "feedback_type": "CORRECTED",
+    "doctor_id": "doc_web_portal",
+    "doctor_email": "zadesojal@gmail.com",
+    "model_version": "v1.0",
+    "created_at": "2026-08-23T18:11:31.369105+00:00",
+    "reviewed_at": "2026-08-23T18:13:16.799371+00:00"
+  },
+  {
+    "review_id": "rev_35b617e765",
+    "prediction_id": "pred_f6f802e258",
+    "prescription_id": "rx_b37ec2d0",
+    "image_reference": "D:\\ediprjcursor\\data\\datasetHand\\Training\\training_words\\1032.png",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "doc_default",
+    "doctor_email": "doctor@clinic.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-23T18:20:42.171334+00:00",
+    "reviewed_at": "2026-08-23T18:20:42.180335+00:00"
+  },
+  {
+    "review_id": "rev_05e1e35822",
+    "prediction_id": "pred_1e5ab441fc",
+    "prescription_id": "rx_dfc8b71a",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_b84865bb93.jpg",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "dr_evans",
+    "doctor_email": "dr.evans@hospital.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-23T18:20:44.519983+00:00",
+    "reviewed_at": "2026-08-23T18:20:45.682186+00:00"
+  },
+  {
+    "review_id": "rev_a40b3b8001",
+    "prediction_id": "pred_427d18f684",
+    "prescription_id": "rx_1a0f56c6",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_86e8168bab.jpg",
+    "original_prediction": "Esonix",
+    "original_confidence": 0.999828577041626,
+    "top_3_predictions": [
+      {
+        "brand_name": "Esonix",
+        "confidence": 0.999828577041626,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Esoral",
+        "confidence": 7.806717621861026e-05,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 5.9840091125806794e-05,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "CONFIRMED",
+    "doctor_verified_label": "Esonix",
+    "known_class": true,
+    "feedback_type": "CONFIRMED",
+    "doctor_id": "dr_smith",
+    "doctor_email": "dr.smith@hospital.org",
+    "model_version": "v1.0",
+    "created_at": "2026-08-23T18:20:45.889820+00:00",
+    "reviewed_at": "2026-08-23T18:20:47.431831+00:00"
+  },
+  {
+    "review_id": "rev_df6e53ddd5",
+    "prediction_id": "pred_21341ae52e",
+    "prescription_id": "rx_7852dbcf",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_d41da1022c.png",
+    "original_prediction": "Napa Extend",
+    "original_confidence": 0.857704758644104,
+    "top_3_predictions": [
+      {
+        "brand_name": "Napa Extend",
+        "confidence": 0.857704758644104,
+        "generic_name": "Paracetamol"
+      },
+      {
+        "brand_name": "Az",
+        "confidence": 0.05475451797246933,
+        "generic_name": "Azithromycin Dihydrate"
+      },
+      {
+        "brand_name": "Lumona",
+        "confidence": 0.043998125940561295,
+        "generic_name": "Montelukast Sodium"
+      }
+    ],
+    "priority": "MEDIUM",
+    "prediction_status": "medium_confidence",
+    "status": "PENDING",
+    "doctor_verified_label": null,
+    "known_class": null,
+    "feedback_type": null,
+    "doctor_id": null,
+    "doctor_email": null,
+    "model_version": "v1.0",
+    "created_at": "2026-08-23T18:21:27.028994+00:00",
+    "reviewed_at": null
+  },
+  {
+    "review_id": "rev_aef9231226",
+    "prediction_id": "pred_45da6d5a6f",
+    "prescription_id": "rx_743ae214",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_42f4016377.jpg",
+    "original_prediction": "Unknown",
+    "original_confidence": 0.5697301030158997,
+    "top_3_predictions": [
+      {
+        "brand_name": "Filmet",
+        "confidence": 0.5697301030158997,
+        "generic_name": "Metronidazole"
+      },
+      {
+        "brand_name": "Telfast",
+        "confidence": 0.20572598278522491,
+        "generic_name": "Fexofenadine Hydrochloride"
+      },
+      {
+        "brand_name": "Flamyd",
+        "confidence": 0.12950696051120758,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "HIGH",
+    "prediction_status": "doctor_verification_required",
+    "status": "CORRECTED",
+    "doctor_verified_label": "Disopan",
+    "known_class": true,
+    "feedback_type": "CORRECTED",
+    "doctor_id": "doc_web_portal",
+    "doctor_email": "zadesojal@gmail.com",
+    "model_version": "v1.0",
+    "created_at": "2026-08-23T19:55:17.786296+00:00",
+    "reviewed_at": "2026-08-23T19:57:41.578039+00:00"
+  },
+  {
+    "review_id": "rev_ef1eb6b23a",
+    "prediction_id": "pred_3d7eacf328",
+    "prescription_id": "rx_e06bb9e7",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_f33e03f957.jpg",
+    "original_prediction": "Nexum",
+    "original_confidence": 0.956518292427063,
+    "top_3_predictions": [
+      {
+        "brand_name": "Nexum",
+        "confidence": 0.956518292427063,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Montene",
+        "confidence": 0.009499266743659973,
+        "generic_name": "Montelukast Sodium"
+      },
+      {
+        "brand_name": "Fexo",
+        "confidence": 0.008456259034574032,
+        "generic_name": "Fexofenadine Hydrochloride"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "PENDING",
+    "doctor_verified_label": null,
+    "known_class": null,
+    "feedback_type": null,
+    "doctor_id": null,
+    "doctor_email": null,
+    "model_version": "v1.0",
+    "created_at": "2026-08-24T18:17:16.169822+00:00",
+    "reviewed_at": null
+  },
+  {
+    "review_id": "rev_3e1907eb24",
+    "prediction_id": "pred_fce1cb2b99",
+    "prescription_id": "rx_83d4d204",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_db22392c17.jpg",
+    "original_prediction": "Unknown",
+    "original_confidence": 0.587639570236206,
+    "top_3_predictions": [
+      {
+        "brand_name": "Fexofast",
+        "confidence": 0.587639570236206,
+        "generic_name": "Fexofenadine Hydrochloride"
+      },
+      {
+        "brand_name": "Napa Extend",
+        "confidence": 0.14567449688911438,
+        "generic_name": "Paracetamol"
+      },
+      {
+        "brand_name": "Filmet",
+        "confidence": 0.04353765770792961,
+        "generic_name": "Metronidazole"
+      }
+    ],
+    "priority": "HIGH",
+    "prediction_status": "doctor_verification_required",
+    "status": "PENDING",
+    "doctor_verified_label": null,
+    "known_class": null,
+    "feedback_type": null,
+    "doctor_id": null,
+    "doctor_email": null,
+    "model_version": "v1.0",
+    "created_at": "2026-08-24T18:21:02.365394+00:00",
+    "reviewed_at": null
+  },
+  {
+    "review_id": "rev_e906feb583",
+    "prediction_id": "pred_b5d24239b1",
+    "prescription_id": "rx_f295eceb",
+    "image_reference": "D:\\ediprjcursor\\data\\uploads\\upload_f8cd593856.jpg",
+    "original_prediction": "Napa Extend",
+    "original_confidence": 0.9949731826782227,
+    "top_3_predictions": [
+      {
+        "brand_name": "Napa Extend",
+        "confidence": 0.9949731826782227,
+        "generic_name": "Paracetamol"
+      },
+      {
+        "brand_name": "Maxpro",
+        "confidence": 0.004494401626288891,
+        "generic_name": "Esomeprazole"
+      },
+      {
+        "brand_name": "Nexum",
+        "confidence": 0.00033131660893559456,
+        "generic_name": "Esomeprazole"
+      }
+    ],
+    "priority": "LOW",
+    "prediction_status": "high_confidence",
+    "status": "PENDING",
+    "doctor_verified_label": null,
+    "known_class": null,
+    "feedback_type": null,
+    "doctor_id": null,
+    "doctor_email": null,
+    "model_version": "v1.0",
+    "created_at": "2026-08-24T18:27:02.632265+00:00",
+    "reviewed_at": null
+  }
+]

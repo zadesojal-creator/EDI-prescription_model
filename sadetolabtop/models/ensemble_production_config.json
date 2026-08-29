@@ -1,0 +1,22 @@
+{
+  "version": "triple_ensemble_v1",
+  "num_classes": 78,
+  "models": [
+    "MobileNetV2",
+    "DenseNet121",
+    "EfficientNetB0"
+  ],
+  "weights": [
+    0.45,
+    0.25,
+    0.3
+  ],
+  "reference_baseline_acc": 0.5983,
+  "mobilenet_standalone_acc": 0.6120689655172413,
+  "densenet_standalone_acc": 0.5488505747126436,
+  "efficientnet_standalone_acc": 0.8390804597701149,
+  "ensemble_acc": 0.8074712643678161,
+  "ensemble_tta_acc": 0.8247126436781609,
+  "macro_f1_tta": 0.824177194824968,
+  "weighted_f1_tta": 0.8223002421051425
+}

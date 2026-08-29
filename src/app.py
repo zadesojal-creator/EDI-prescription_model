@@ -23,10 +23,21 @@ from src.admin_dashboard import AdminDashboardManager
 from src.model_registry import ModelRegistryManager
 from src.medicine_info_service import MedicineInfoService
 
+from fastapi.middleware.cors import CORSMiddleware
+
 app = FastAPI(
     title="AI Handwritten Medicine Recognition & Continuous Learning System",
     description="Healthcare decision-support system featuring Top-3 candidate recognition, generic medicine mapping, human-in-the-loop doctor review priority queues, email notifications, and admin cloud retraining orchestration.",
     version="1.0.0"
+)
+
+# Enable CORS for Frontend Access
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # Initialize Singletons
